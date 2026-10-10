@@ -1,0 +1,3 @@
+## How to Use the Companion GitHub Repository
+
+The companion repository provides chapter-organized notebooks, programming examples, and reproducibility resources. Visit https://github.com/ZagElSayed/Introduction-to-Neuroinformatics and select `chapters/` to find your chapter. No GitHub account is needed to browse or download public files. Choose **Code → Download ZIP** to download the materials. Follow the chapter README to set up Python and Jupyter, obtain datasets from their cited sources, and run notebooks in order. Begin with Chapter 1's PhysioNet EEG exploration and continue through the cumulative Project NeuroBridge. Preserve provenance and do not upload identifiable clinical data.
