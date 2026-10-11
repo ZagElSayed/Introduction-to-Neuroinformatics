@@ -1,0 +1,32 @@
+name: Chapter 1-5 laboratory checks
+
+on:
+  push:
+    paths:
+      - 'chapters/ch0[1-5]-**'
+      - 'tests/**'
+      - 'requirements.txt'
+      - '.github/workflows/chapter-labs.yml'
+  pull_request:
+    paths:
+      - 'chapters/ch0[1-5]-**'
+      - 'tests/**'
+      - 'requirements.txt'
+      - '.github/workflows/chapter-labs.yml'
+
+jobs:
+  smoke-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install teaching environment
+        run: python -m pip install -r requirements.txt
+      - name: Run notebook smoke tests (synthetic data)
+        env:
+          MPLBACKEND: Agg
+        run: python -m pytest -q tests/test_chapter_labs.py
