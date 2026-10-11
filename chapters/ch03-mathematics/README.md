@@ -18,3 +18,7 @@
 Include a plot or output, an explanation of the underlying physiology or mathematics, one limitation, and a reproducibility note. For a graduate extension, vary a scientifically meaningful parameter and justify the observed change.
 
 **Safety and data policy:** Exercises are educational, not diagnostic. Never commit participant-level recordings or identifiable clinical data. Keep raw data and generated outputs outside version control.
+
+## Classroom assignment and rubric
+
+See [ASSIGNMENT.md](ASSIGNMENT.md) for learning outcomes, step-by-step tasks, expected observations, undergraduate and graduate requirements, the 100-point rubric, and troubleshooting guidance.
