@@ -1,0 +1,31 @@
+name: Chapter 6 neuroimaging lab checks
+
+on:
+  push:
+    paths:
+      - 'chapters/ch06-neuroimaging/**'
+      - 'tests/test_chapter6_lab.py'
+      - 'requirements.txt'
+      - '.github/workflows/chapter6-lab.yml'
+  pull_request:
+    paths:
+      - 'chapters/ch06-neuroimaging/**'
+      - 'tests/test_chapter6_lab.py'
+      - 'requirements.txt'
+      - '.github/workflows/chapter6-lab.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Validate synthetic NIfTI and connectivity
+        env:
+          MPLBACKEND: Agg
+        run: python -m pytest -q tests/test_chapter6_lab.py
