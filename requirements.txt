@@ -4,3 +4,4 @@ matplotlib>=3.7,<4
 jupyterlab>=4,<5
 pytest>=7,<10
 scipy>=1.11,<2
+nibabel>=5.1,<6
