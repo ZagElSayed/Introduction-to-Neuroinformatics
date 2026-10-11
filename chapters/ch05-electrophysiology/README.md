@@ -40,3 +40,7 @@ The PhysioNet dataset is hosted and maintained by its original provider. Verify 
 ## Jupyter notebook
 
 Run [`05_inspect_real_eeg.ipynb`](05_inspect_real_eeg.ipynb) after installing the root requirements and placing the public EDF in the notebook's working directory. Interpret raw EEG and spectral plots cautiously. The notebook complements the command-line script and does not replace expert artifact review.
+
+## Classroom assignment and rubric
+
+See [ASSIGNMENT.md](ASSIGNMENT.md) for learning outcomes, step-by-step tasks, expected observations, undergraduate and graduate requirements, the 100-point rubric, and troubleshooting guidance.
