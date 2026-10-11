@@ -72,7 +72,7 @@ def analyze(folder, output):
     fig.tight_layout()
     fig.savefig(output / "connectivity.png", dpi=150)
     plt.close(fig)
-    summary = {"source": "synthetic, not clinical", "voxel_sizes_mm": t1.header.get_zooms()[:3], "t1_shape": t1.shape, "bold_shape": fmri.shape, "tr_seconds": fmri.header.get_zooms()[3], "atlas_regions": [1, 2, 3, 4], "method": "mean ROI time courses and Pearson correlation, without temporal filtering or nuisance regression", "nibabel_version": nib.__version__, "numpy_version": np.__version__}
+    summary = {"source": "synthetic, not clinical", "voxel_sizes_mm": [float(v) for v in t1.header.get_zooms()[:3]], "t1_shape": t1.shape, "bold_shape": fmri.shape, "tr_seconds": float(fmri.header.get_zooms()[3]), "atlas_regions": [1, 2, 3, 4], "method": "mean ROI time courses and Pearson correlation, without temporal filtering or nuisance regression", "nibabel_version": nib.__version__, "numpy_version": np.__version__}
     (output / "analysis_summary.json").write_text(json.dumps(summary, indent=2))
     return corr
 
