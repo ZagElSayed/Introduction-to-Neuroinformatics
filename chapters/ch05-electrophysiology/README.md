@@ -36,3 +36,7 @@ The starter script writes `recording_summary.json`, `raw_segment.png`, and `psd.
 ### Data governance
 
 The PhysioNet dataset is hosted and maintained by its original provider. Verify its current access terms, citation, and permitted educational use on the source page. **No patient-level recordings are mirrored or committed here**, even when publicly accessible. Never upload identifiable clinical EEG to public repositories, notebooks, or AI tools. This is research education, not diagnostic software.
+
+## Jupyter notebook
+
+Run [`05_inspect_real_eeg.ipynb`](05_inspect_real_eeg.ipynb) after installing the root requirements and placing the public EDF in the notebook's working directory. Interpret raw EEG and spectral plots cautiously. The notebook complements the command-line script and does not replace expert artifact review.
