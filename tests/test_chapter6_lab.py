@@ -32,3 +32,43 @@ def test_notebook_structure():
     data = json.loads(path.read_text(encoding="utf-8"))
     assert data["nbformat"] == 4
     assert any(cell["cell_type"] == "code" for cell in data["cells"])
+
+def test_student_cli_end_to_end(tmp_path):
+    import subprocess
+    import sys
+    import nibabel as nib
+    out = tmp_path / "cli"
+    result = subprocess.run(
+        [sys.executable, str(SCRIPT), "--output-dir", str(out)],
+        cwd=ROOT, capture_output=True, text=True, timeout=120, check=True
+    )
+    assert "1." in result.stdout or "[" in result.stdout
+    t1 = nib.load(out / "synthetic_data" / "synthetic_T1w.nii.gz")
+    fmri = nib.load(out / "synthetic_data" / "synthetic_bold.nii.gz")
+    atlas = nib.load(out / "synthetic_data" / "synthetic_atlas.nii.gz")
+    assert t1.shape == (32, 32, 24)
+    assert fmri.shape == (32, 32, 24, 180)
+    assert np.allclose(t1.affine, fmri.affine)
+    assert np.allclose(t1.affine, atlas.affine)
+    assert np.allclose(t1.header.get_zooms()[:3], (2, 2, 2.5))
+    assert fmri.header.get_zooms()[3] == 2.0
+    for name in ("synthetic_T1w.nii.gz", "synthetic_atlas.nii.gz", "synthetic_bold.nii.gz", "metadata.json"):
+        assert (out / "synthetic_data" / name).is_file()
+
+
+def test_notebook_cells_execute(tmp_path, monkeypatch):
+    """Run the actual student notebook code cells in order, not just JSON syntax."""
+    import sys
+    from IPython.display import Image, display
+    nb = json.loads((ROOT / "chapters/ch06-neuroimaging/06_neuroimaging_connectivity.ipynb").read_text())
+    lab = ROOT / "chapters/ch06-neuroimaging"
+    monkeypatch.chdir(tmp_path)
+    sys.path.insert(0, str(lab))
+    globals_dict = {"__name__": "__main__", "display": display, "Image": Image}
+    for cell in nb["cells"]:
+        if cell["cell_type"] == "code":
+            code = "".join(cell["source"])
+            exec(compile(code, "<Chapter 6 notebook cell>", "exec"), globals_dict)
+    assert (lab / "outputs/ch06/analysis_summary.json").is_file()
+    assert np.isfinite(globals_dict["corr_detrended"]).all()
+    assert globals_dict["corr_detrended"].shape == (4, 4)
