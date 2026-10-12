@@ -1,0 +1,15 @@
+{
+  "seed": 18,
+  "participants": 48,
+  "windows": 4,
+  "samples": 256,
+  "sampling_rate": 128,
+  "segment": 64,
+  "hop": 32,
+  "image_size": 64,
+  "db_min": -40.0,
+  "db_max": -5.0,
+  "signal": 0.15,
+  "epochs": 25,
+  "learning_rate": 0.003
+}
