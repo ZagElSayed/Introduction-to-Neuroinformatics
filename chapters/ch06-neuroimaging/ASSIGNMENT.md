@@ -17,13 +17,13 @@
 ## Procedure
 
 1. Install repository dependencies with `python -m pip install -r requirements.txt`.
-2. From `chapters/ch06-neuroimaging`, open the notebook in Jupyter and execute its code cell; alternatively, run the Python script from the repository root.
-3. Identify the NIfTI anatomical and fMRI array dimensions, voxel spacing in millimeters, and the fMRI repetition time (TR).
+2. **Notebook route:** from the repository root run `cd chapters/ch06-neuroimaging`, then `jupyter lab`, open `06_neuroimaging_connectivity.ipynb`, and choose **Run All Cells** using the environment in which dependencies were installed. **Script route:** from the repository root run `python chapters/ch06-neuroimaging/exercise_6_1_neuroimaging.py --output-dir outputs/ch06`. The two routes use different output locations relative to their working directories.
+3. Identify the NIfTI anatomical and fMRI array dimensions, voxel spacing in millimeters, and the fMRI repetition time (TR). Use the notebook's geometry cell or inspect `analysis_summary.json` and the printed affine.
 4. Examine the affine and describe how it maps voxel indices to physical coordinates.
 5. Inspect three anatomical slices. Do not infer left/right orientation solely from array axis labels.
 6. Examine the four regional mean time series and the 4 × 4 correlation matrix.
 7. Record two limitations of the synthetic signal generator and explain why a strong correlation is not evidence of a direct neural connection.
-8. Submit outputs and a brief reproducibility report.
+8. Submit outputs and a brief reproducibility report (suggested length: 1–2 pages). Include the run command or notebook kernel, Python/package versions, synthetic seed, a screenshot or saved copy of each figure, the matrix CSV, the affine-to-coordinate example, and answers to the interpretation questions. If using the script route, the files are in `outputs/ch06/` at the repository root; if using the notebook route, they are under `chapters/ch06-neuroimaging/outputs/ch06/`.
 
 ## Expected observations
 
@@ -31,7 +31,7 @@ The script generates an anatomical volume of shape **32 × 32 × 24**, a synthet
 
 ## Graduate extension
 
-Compare connectivity estimates under two explicitly documented time-series analysis choices, such as raw Pearson correlation versus a carefully justified detrending method. Quantify differences and discuss temporal autocorrelation, confounds, atlas selection, and sensitivity to preprocessing. Explain why this exercise cannot establish biomarkers or treatment effects.
+Execute the notebook's graduate sensitivity cell to compare raw Pearson correlations with correlations after linear detrending, or implement another justified time-series analysis choice. Quantify differences and discuss temporal autocorrelation, confounds, atlas selection, and sensitivity to preprocessing. Explain why this exercise cannot establish biomarkers or treatment effects.
 
 ## Submission checklist
 
@@ -66,4 +66,4 @@ Compare connectivity estimates under two explicitly documented time-series analy
 
 ## Instructor verification
 
-Run `python -m pytest -q tests/test_chapter6_lab.py`. Automated tests validate synthetic geometry, output shapes, and correlation symmetry. A separate real-data workflow would require acquisition-specific preprocessing, alignment, confound handling, and verified source permissions.
+From the repository root run `python -m pytest -q tests/test_chapter6_lab.py`. Automated tests validate synthetic geometry, output shapes, correlation symmetry, the student-facing command-line route, and execution of the notebook's code cells. A separate real-data workflow would require acquisition-specific preprocessing, alignment, confound handling, and verified source permissions.
