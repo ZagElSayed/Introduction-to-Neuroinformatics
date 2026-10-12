@@ -40,3 +40,32 @@ def test_cli(tmp_path):
     assert len(report["results"])==6
     assert report["original_matrix"]!=report["confounded_matrix"]
     assert len(summary["output_sha256"])==64
+
+def test_threshold_density_and_disconnected_efficiency():
+    m=load()
+    a=m.matrix()
+    g=m.threshold(a,0.2)
+    stats=m.metrics(a,g)
+    assert sum(stats["degree"])==6  # three undirected edges
+    assert abs(stats["density"]-0.2)<1e-12
+    assert stats["components"]>=1
+    assert all(0<=c<=1 for c in stats["clustering"])
+    # Strength is intentionally computed on the unthresholded weighted matrix.
+    assert stats["strength"]==[sum(row) for row in a]
+
+def test_invalid_density_and_matrix():
+    m=load()
+    a=m.matrix()
+    for density in (0,1.01):
+        try:
+            m.threshold(a,density)
+            assert False,"Invalid density should fail"
+        except ValueError:
+            pass
+    bad=[row[:] for row in a]
+    bad[0][1]=float("nan")
+    try:
+        m.validate(bad)
+        assert False,"NaN should fail validation"
+    except ValueError:
+        pass
