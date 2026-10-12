@@ -1,0 +1,25 @@
+name: Chapter 10 pipeline lab checks
+
+on:
+  push:
+    paths:
+      - 'chapters/ch10-data-pipelines/**'
+      - 'tests/test_chapter10_lab.py'
+      - '.github/workflows/chapter10-lab.yml'
+  pull_request:
+    paths:
+      - 'chapters/ch10-data-pipelines/**'
+      - 'tests/test_chapter10_lab.py'
+      - '.github/workflows/chapter10-lab.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Chapter 10 checks
+        run: python -m pytest -q tests/test_chapter10_lab.py
