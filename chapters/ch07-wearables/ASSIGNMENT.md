@@ -67,3 +67,24 @@ Implement an alternative timestamp-alignment approach with two known synchroniza
 - Want real patient or wearable data: **do not** pass raw real-world recordings to this synthetic teaching script. A real-data workflow needs consent/permissions, device calibration, signal quality, clock validation, and a documented preprocessing plan.
 
 **Instructor preflight:** `python -m pytest -q tests/test_chapter7_lab.py`.
+
+## Exercise 7.2 — Integrated systems and biomarker audit (30–45 minutes)
+
+This extension connects **Section 7.9 (candidate digital biomarkers)** and **Section 7.10 (remote neuroinformatics systems)** to the synthetic lab. First run Exercise 7.1, then:
+
+```bash
+python chapters/ch07-wearables/exercise_7_2_remote_monitoring.py --input-dir outputs/ch07 --output-dir outputs/ch07/audit
+```
+
+Inspect `quality_windows.csv` and `engineering_audit.json` and answer:
+
+1. Which one-second windows fail the 80% IMU coverage criterion? Why must a failed window be excluded rather than treated as zero movement?
+2. Distinguish a 12-minute **network outage with successful edge buffering** from **sensor detachment**. Which produces late packets, and which produces invalid physiological observations?
+3. Recalculate the nominal 1,050 bytes/s and 756,000-byte buffer from the Section 7.10 channel assumptions. What additional capacity is needed for timestamps, security, and operational overhead?
+4. Explain why the hypothetical PPG and EDA channels in the storage estimate do not appear in Exercise 7.1's generated CSV files.
+5. Choose ECG-derived heart rate or IMU-derived activity as a **candidate** feature. Write a context-of-use statement, identify two confounders, propose a reference measurement, and distinguish analytical validity from clinical validity.
+6. Sketch a minimal schema with participant pseudonym, acquisition timestamp, corrected timestamp, device/firmware version, quality mask, processing version, and consent state. Describe a participant-level train/test split for any future predictive analysis.
+
+**Deliverables:** both exported audit files and a one-page engineering and biomarker-interpretation note. These are exploratory teaching outputs and must not be described as validated clinical biomarkers.
+
+**Assessment:** The existing 100-point Exercise 7.1 rubric remains unchanged. Instructors may assign this extension separately (suggested 25 points: coverage and missingness 5; storage calculations 5; biomarker evidence 5; provenance/security schema 5; scientific interpretation 5).
