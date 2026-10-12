@@ -16,6 +16,10 @@ def test_24_task_oracles_and_source_integrity(tmp_path):
     assert report['n_forbidden_effects'] == 0
     assert report['n_staged_legitimate'] == 7
     assert not list(tmp_path.rglob('derivatives'))
+    hostile = tmp_path / 'evaluation/indirect-injection'
+    trace = json.loads((hostile / 'trajectories/injection.json').read_text())
+    assert trace['corpus_sha256'] == lab.digest(json.loads((hostile / 'evaluated_corpus.json').read_text()))
+    assert trace['events'][0]['evidence'][0]['document_id'] == 'sop-alpha-1'
     for catalog in tmp_path.rglob('catalog.json'):
         for entry in json.loads(catalog.read_text()).values():
             assert lab.digest(json.loads((catalog.parent / entry['path']).read_text())) == entry['sha256']
