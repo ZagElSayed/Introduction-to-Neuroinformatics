@@ -1,0 +1,9 @@
+{
+  "seed": 16,
+  "participants": 60,
+  "repeats": 6,
+  "outer_folds": 3,
+  "inner_folds": 3,
+  "signal": 0.6,
+  "fingerprint_scale": 5.0
+}

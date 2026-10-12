@@ -1,0 +1,17 @@
+name: Chapter 16 laboratory
+on:
+  push:
+    paths: ['chapters/ch16-classical-ml/**', 'tests/test_chapter16_lab.py', '.github/workflows/chapter16-lab.yml', 'requirements.txt']
+  pull_request:
+    paths: ['chapters/ch16-classical-ml/**', 'tests/test_chapter16_lab.py', '.github/workflows/chapter16-lab.yml', 'requirements.txt']
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q tests/test_chapter16_lab.py
+      - run: python chapters/ch16-classical-ml/exercise_16_1_grouped_ml.py --config chapters/ch16-classical-ml/config.json --output-dir outputs/ch16
