@@ -1,0 +1,25 @@
+name: Chapter 8 experimental protocol lab checks
+
+on:
+  push:
+    paths:
+      - 'chapters/ch08-experimental-design/**'
+      - 'tests/test_chapter8_lab.py'
+      - '.github/workflows/chapter8-lab.yml'
+  pull_request:
+    paths:
+      - 'chapters/ch08-experimental-design/**'
+      - 'tests/test_chapter8_lab.py'
+      - '.github/workflows/chapter8-lab.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Chapter 8 protocol and timing tests
+        run: python -m pytest -q tests/test_chapter8_lab.py
