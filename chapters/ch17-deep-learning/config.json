@@ -1,0 +1,16 @@
+{
+  "seed": 17,
+  "participants": 48,
+  "windows": 6,
+  "channels": 2,
+  "samples": 128,
+  "sampling_rate": 64,
+  "epochs": 30,
+  "patience": 8,
+  "batch_size": 32,
+  "learning_rate": 0.003,
+  "weight_decay": 0.001,
+  "augmentation_noise": 0.02,
+  "signal": 0.08,
+  "device": "cpu"
+}
