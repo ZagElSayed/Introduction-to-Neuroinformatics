@@ -12,6 +12,7 @@ on:
     paths:
       - 'chapters/ch07-wearables/**'
       - 'tests/test_chapter7_lab.py'
+      - 'tests/test_chapter7_remote_monitoring.py'
       - 'requirements.txt'
       - '.github/workflows/chapter7-lab.yml'
 
