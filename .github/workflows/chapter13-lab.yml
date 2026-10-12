@@ -1,0 +1,25 @@
+name: Chapter 13 spectral lab checks
+
+on:
+  push:
+    paths:
+      - 'chapters/ch13-time-frequency/**'
+      - 'tests/test_chapter13_lab.py'
+      - '.github/workflows/chapter13-lab.yml'
+  pull_request:
+    paths:
+      - 'chapters/ch13-time-frequency/**'
+      - 'tests/test_chapter13_lab.py'
+      - '.github/workflows/chapter13-lab.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Chapter 13 spectral checks
+        run: python -m pytest -q tests/test_chapter13_lab.py
