@@ -7,6 +7,7 @@
 From the public repository root:
 
 ```bash
+python -m pip install pytest
 python chapters/ch08-experimental-design/exercise_8_1_protocol_qc.py --output-dir outputs/ch08
 python -m pytest -q tests/test_chapter8_lab.py
 ```
