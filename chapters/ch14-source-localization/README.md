@@ -11,6 +11,17 @@ python -m pytest -q tests/test_chapter14_lab.py
 
 Choose a new or empty directory for each run. Existing nonempty directories are refused. Runtime and numerical results must be confirmed by local execution. The source checks performed during editing do not establish that these tests pass.
 
+## CS/IT reading guide — Section 14.1 and Figure 14.1
+
+The chapter distinguishes observed channel arrays from model-dependent source arrays. Use the toy lab to make that distinction concrete:
+
+- `y` contains two sensor measurements; `j` contains three signed candidate amplitudes. A source index is an identifier in a model, not a brain-region label or a distance.
+- Rows of `G` correspond to sensor channels and columns to candidate source amplitudes. Its links represent sensitivities/weights, not neural pathways. Array ordering must agree with those identities.
+- The forward operation predicts sensors from a specified source vector. The inverse uses measurements and an explicit penalty to select an estimate; it is not an ordinary reversal of `G`.
+- The two vectors in `nonunique_sources.csv` show that extra source-array entries do not add measured information. Read the chapter's worked null-space example before interpreting a good residual.
+- The lab is dimensionless. Real EEG/MEG workflows additionally require measurement units, reference, coordinate frames, anatomy and orientation/normalization metadata; use `REAL_SOURCE_PROTOCOL.md` for that extension.
+- ICA components, inferred anatomical sources and connectivity edges are different objects. This exercise implements only the declared toy forward/inverse problem.
+
 ## Experiment 1 — Two source vectors, one measurement
 
 The nominal gain matrix is `G = [[1, .4, .1], [.2, .8, .4]]`; the known source is `[1, 0, 0]`, giving sensors `[1, .2]`. The nonzero vector `n = [.08, -.38, .72]` satisfies `G n = 0`. Consequently `[1, 0, 0]` and `[1.08, -.38, .72]` produce the same measurement, within floating-point rounding. In fact, `j + a*n` does so for any real scalar `a`.
