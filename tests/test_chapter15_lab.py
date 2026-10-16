@@ -69,3 +69,68 @@ def test_invalid_density_and_matrix():
         assert False,"NaN should fail validation"
     except ValueError:
         pass
+
+
+
+def test_chapter_worked_example_has_known_answers():
+    m=load()
+    example=m.worked_example()
+    stats=example['metrics']
+    assert stats['degree']==[3,2,2,2,2,1]
+    assert stats['edge_count']==6
+    assert abs(stats['mean_clustering']-7/18)<1e-12
+    assert abs(stats['global_efficiency']-19/30)<1e-12
+    assert stats['distances'][1][5]==4
+    graph=[row[:] for row in example['adjacency']]
+    graph[3][4]=graph[4][3]=0
+    disconnected=m.metrics(example['adjacency'],graph)
+    assert disconnected['components']==2
+    assert disconnected['global_efficiency']<stats['global_efficiency']
+
+
+def test_threshold_ties_and_all_hubs_are_explicit():
+    m=load()
+    a=[[0 if i==j else 0.5 for j in range(4)] for i in range(4)]
+    graph=m.threshold(a,0.5)
+    # Six candidate pairs; deterministic ties retain (0,1), (0,2), (0,3).
+    assert graph==[[0,1,1,1],[1,0,0,0],[1,0,0,0],[1,0,0,0]]
+    complete=m.threshold(a,1)
+    stats=m.metrics(a,complete)
+    assert stats['hubs_by_degree']==[0,1,2,3]
+    assert stats['retained_strength']==stats['strength']
+
+
+def test_outputs_preserve_graphs_hashes_and_prior_runs(tmp_path):
+    import hashlib
+    import pytest
+    m=load()
+    out=tmp_path/'run01'
+    report=m.run(out)
+    assert report['review_status']=='review_required'
+    assert report['accepted'] is False
+    assert report['schema_version']==2
+    assert len(report['configuration_sha256'])==64
+    for name,expected in report['artifacts_sha256'].items():
+        assert hashlib.sha256((out/name).read_bytes()).hexdigest()==expected
+    derivatives=json.loads((out/'graph_derivatives.json').read_text())
+    assert len(derivatives)==6
+    for item in derivatives:
+        assert item['metrics']['edge_count']==round(item['requested_density']*15)
+        assert all(0<=ret<=full for ret,full in
+                   zip(item['metrics']['retained_strength'],item['metrics']['strength']))
+    before=(out/'graph_report.json').read_bytes()
+    with pytest.raises(FileExistsError):
+        m.run(out)
+    assert (out/'graph_report.json').read_bytes()==before
+
+
+def test_nonfinite_density_and_invalid_graph_fail():
+    import pytest
+    m=load()
+    for value in (float('nan'),float('inf'),-0.1):
+        with pytest.raises(ValueError):
+            m.threshold(m.matrix(),value)
+    g=m.worked_example()['adjacency']
+    g[0][0]=1
+    with pytest.raises(ValueError):
+        m.metrics(m.matrix(),g)
