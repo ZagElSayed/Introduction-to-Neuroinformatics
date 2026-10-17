@@ -1,0 +1,22 @@
+name: Chapter 19 bounded agent laboratory
+on:
+  push:
+    paths: ['chapters/ch19-ai-agents/**', 'tests/test_chapter19_lab.py', '.github/workflows/chapter19-lab.yml']
+  pull_request:
+    paths: ['chapters/ch19-ai-agents/**', 'tests/test_chapter19_lab.py', '.github/workflows/chapter19-lab.yml']
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'pytest>=7,<10'
+      - run: python -m pytest -q tests/test_chapter19_lab.py
+      - run: python chapters/ch19-ai-agents/exercise_19_1_bounded_agent.py evaluate --output-dir outputs/ch19-evaluation
+      - name: Upload trajectories and evaluation
+        uses: actions/upload-artifact@v4
+        with:
+          name: chapter19-agent-evaluation
+          path: outputs/ch19-evaluation
