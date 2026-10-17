@@ -6,6 +6,10 @@ Start with **[FIRST_STEPS.md](FIRST_STEPS.md)** for the shared CS/IT and medical
 
 **New to ML or programming?** Follow **[MED_NEURO_WALKTHROUGH.md](MED_NEURO_WALKTHROUGH.md)** for Windows/macOS/Linux setup, output reading, model comparison and a medical/neurology interpretation worksheet. `requirements-lab.txt` provides just this lab's runtime dependencies; the full-course requirements below are also supported.
 
+## Start with an easy coding lesson
+
+For a first implementation, use **[FIRST_MODEL.md](FIRST_MODEL.md)** and run `exercise_16_0_first_model.py`. It uses one row per artificial person and prints predictions, error counts and a dummy-baseline comparison. Its six commented blocks teach table → split → pipeline → fit → predict → inspect. Then proceed to the full repeated-measures lab below. The introductory script writes no artifacts and does not tune hyperparameters.
+
 ## Data and intended use
 
 The baseline generates **synthetic educational feature vectors**, not EEG or clinical data: 60 artificial participants, six rows each, four physiology-like variables, and artificial identity coordinates. The target is a balanced invented participant label. A weak target-associated feature and stable fingerprints illustrate generalization versus memorization. The row-split comparison is intentionally invalid evidence for unseen participants; the scaler itself is still fit only on training rows. The artificial identity construction is deliberately exaggerated, not a physical model of EEG fingerprints. No download, patient data, or clinical claim is involved.

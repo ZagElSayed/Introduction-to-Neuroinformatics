@@ -2,6 +2,8 @@
 
 Use this alongside Chapter 16 and [FIRST_STEPS.md](FIRST_STEPS.md). You do not need prior machine-learning programming experience. You will run an existing experiment, inspect its evidence, change one assumption and write an interpretation. The inputs and targets are invented, so the exercise has no diagnostic or treatment meaning.
 
+**First time coding an ML model?** Start with [FIRST_MODEL.md](FIRST_MODEL.md). Use the environment setup below, run the short `exercise_16_0_first_model.py` instead of the full lab, and return here when its split/fit/predict operations are clear. This guide then introduces the repeated-measures experiment.
+
 ## 1. Know what you are building
 
 The script learns to predict an invented binary participant label from synthetic feature rows. Its default data have **60 people, six rows per person and 64 feature columns**. Four features are physiology-like numbers; the other 60 deliberately encode artificial participant identity. This exaggerated construction exposes how recognizing a person can inflate a contaminated test score.
