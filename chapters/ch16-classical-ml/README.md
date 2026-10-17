@@ -4,6 +4,8 @@ Build it wrong, then build it right: compare a deliberately contaminated row spl
 
 Start with **[FIRST_STEPS.md](FIRST_STEPS.md)** for the shared CS/IT and medical/neurology walkthrough, worked predictions, fold arithmetic and output-reading order. The advanced measured-data extension is separated in **[REAL_DATA_PROTOCOL.md](REAL_DATA_PROTOCOL.md)**.
 
+**New to ML or programming?** Follow **[MED_NEURO_WALKTHROUGH.md](MED_NEURO_WALKTHROUGH.md)** for Windows/macOS/Linux setup, output reading, model comparison and a medical/neurology interpretation worksheet. `requirements-lab.txt` provides just this lab's runtime dependencies; the full-course requirements below are also supported.
+
 ## Data and intended use
 
 The baseline generates **synthetic educational feature vectors**, not EEG or clinical data: 60 artificial participants, six rows each, four physiology-like variables, and artificial identity coordinates. The target is a balanced invented participant label. A weak target-associated feature and stable fingerprints illustrate generalization versus memorization. The row-split comparison is intentionally invalid evidence for unseen participants; the scaler itself is still fit only on training rows. The artificial identity construction is deliberately exaggerated, not a physical model of EEG fingerprints. No download, patient data, or clinical claim is involved.
@@ -69,4 +71,5 @@ Optional real-data source: [PhysioNet EEG Motor Movement/Imagery Dataset v1.0.0]
 Updated reporting/appraisal sources: [TRIPOD+AI (2024)](https://doi.org/10.1136/bmj-2023-078378) and [PROBAST+AI (2025)](https://doi.org/10.1136/bmj-2024-082505). They help describe and assess evidence, not certify clinical readiness.
 
 Method references: [scikit-learn preprocessing pitfalls](https://scikit-learn.org/stable/common_pitfalls.html), [nested CV](https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html), and [probability calibration](https://scikit-learn.org/stable/modules/calibration.html). Scientific claims require actual validation beyond this synthetic exercise.
+
 

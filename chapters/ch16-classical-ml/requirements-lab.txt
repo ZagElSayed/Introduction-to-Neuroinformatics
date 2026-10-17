@@ -1,0 +1,6 @@
+# Minimal runtime dependencies for the synthetic Chapter 16 lab.
+# Ranges match the corresponding dependencies in the course requirements.txt.
+numpy>=1.24,<3
+matplotlib>=3.7,<4
+scikit-learn>=1.4,<2
+joblib>=1.3,<2

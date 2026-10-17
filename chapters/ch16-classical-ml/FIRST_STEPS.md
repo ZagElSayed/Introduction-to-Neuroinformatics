@@ -2,6 +2,8 @@
 
 This guide accompanies the chapter's calculations. All numbers in the script are synthetic. Medical, neurology, CS and IT students complete the same computations and split audit.
 
+For a command-by-command introduction, use **[MED_NEURO_WALKTHROUGH.md](MED_NEURO_WALKTHROUGH.md)**. It includes local setup, output locations, a metric worksheet and a controlled sensitivity exercise. All tracks can use it.
+
 ## 1. Describe the experiment before fitting
 
 A target is what you want to predict; a feature is an input available at prediction time. A label is the recorded target value. In this lab, labels are invented binary participant labels. They are not diagnoses. Real clinical labels need assignment criteria, timing, eligibility and uncertainty; motor-task labels need event definitions.
@@ -70,3 +72,4 @@ Every completed run remains `review_required` with `accepted: false`. A manifest
 **Medical/neurology:** Explain the invented label, independence unit, measurement context, error consequences and why a well-ranked prediction is not automatically calibrated or clinically useful.
 
 Then exchange explanations. A complete handoff needs both.
+
