@@ -73,3 +73,7 @@ Every completed run remains `review_required` with `accepted: false`. A manifest
 
 Then exchange explanations. A complete handoff needs both.
 
+
+## Complete the assessed handoff
+
+Follow [ASSIGNMENT.md](ASSIGNMENT.md) and [SUBMISSION_TEMPLATE.md](SUBMISSION_TEMPLATE.md) for the 100-point rubric. In subsection 16.18.2's split audit, inner manifest indices are global row IDs: map them through `row_manifest.csv`, not a renumbered outer-training table. Setting `fingerprint_scale` to zero retains the feature schema. The final all-data refit and the fold-specific predictions are different artifacts. Figures 16.9 and 16.10 bound the claim and explain the evidence handoff; the assignment maps all ten figures to tasks.
