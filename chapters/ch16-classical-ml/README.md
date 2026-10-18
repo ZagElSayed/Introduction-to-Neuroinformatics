@@ -19,7 +19,8 @@ The baseline generates **synthetic educational feature vectors**, not EEG or cli
 From the repository root, with Python 3.11 or newer:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -r chapters/ch16-classical-ml/requirements-lab.txt
+python -m pip install pytest
 python chapters/ch16-classical-ml/exercise_16_1_grouped_ml.py --config chapters/ch16-classical-ml/config.json --output-dir outputs/ch16/run01
 python -m pytest -q tests/test_chapter16_lab.py
 python chapters/ch16-classical-ml/exercise_16_1_grouped_ml.py --config outputs/ch16/run01/config.json --output-dir outputs/ch16/run02
@@ -59,12 +60,9 @@ The refitted logistic artifact is **not** any individual fold model and has no p
 
 ## Assignment — 100 points
 
-1. **Target and feature contract (15):** Explain the independent unit, invented target and fingerprint construction. Identify what a clinical or task-based target would require.
-2. **Split audit (20):** Inspect inner and outer manifests, verify zero participant overlap, and contrast the naive row split. Explain why a pipeline alone cannot fix an inappropriate split.
-3. **Model comparison (20):** Compare three classical families and the dummy baseline, chosen parameters, participant discrimination and threshold errors. Do not choose a winning family from outer results and call its score an unbiased estimate of the selected system.
-4. **Probability evidence (15):** Interpret reliability, Brier score and average precision. Explain the sampling prevalence, aggregation rule and why 0.5 is only a teaching threshold.
-5. **Sensitivity (15):** Copy the configuration, set `fingerprint_scale` to 0, run to a separate output directory, and compare predictions/metrics. Also vary `signal` or seed. Explain which conclusions are stable and why differences are not clinical effect sizes.
-6. **Reproduction and GitHub reflection (15):** Reproduce predictions and splits from saved config. Submit code/config commit, derivative hashes, plots, model card and a short reflection linking upstream NeuroBridge feature provenance. Document software versions and limitations; keep restricted recordings out of Git.
+Use **[ASSIGNMENT.md](ASSIGNMENT.md)** as the shared book/repository submission contract and copy **[SUBMISSION_TEMPLATE.md](SUBMISSION_TEMPLATE.md)** for your report. It specifies the six rubric categories, three required runs (baseline, zero-identity sensitivity, reproduction), global-index split audit, figure checkpoints, evidence attachments, and what to commit. Additional seed/signal experiments and measured-data work are optional.
+
+The baseline zeros identity columns when `fingerprint_scale=0`; its 64-column default schema is retained. No empirical performance decrease is guaranteed.
 
 ## Graduate extension and public data
 
@@ -77,3 +75,7 @@ Updated reporting/appraisal sources: [TRIPOD+AI (2024)](https://doi.org/10.1136/
 Method references: [scikit-learn preprocessing pitfalls](https://scikit-learn.org/stable/common_pitfalls.html), [nested CV](https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html), and [probability calibration](https://scikit-learn.org/stable/modules/calibration.html). Scientific claims require actual validation beyond this synthetic exercise.
 
 
+
+## Source verification and execution
+
+The Chapter 16 GitHub workflow performs static Python syntax/JSON and required-file checks only. It does not import the lab, fit models, run pytest, or execute assignments. Run the optional runtime tests locally using the commands above; no runtime result is asserted by a static check.

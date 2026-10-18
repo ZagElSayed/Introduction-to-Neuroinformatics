@@ -114,3 +114,7 @@ The report remains `review_required` with `accepted: false`. A successful comput
 Read [REAL_DATA_PROTOCOL.md](REAL_DATA_PROTOCOL.md). Agree the target, timing, eligibility and measurement context with the study team. Preserve participant and session IDs, input permissions and upstream feature provenance. Replace the synthetic generator with a documented extraction process and redesign splitting/aggregation if labels vary within a participant. This baseline accepts synthetic configuration parameters; it does **not** accept an arbitrary patient CSV or automatically process EEG.
 
 CS/IT collaborators help make the schema, code and fitted transformations reproducible. Medical and neurology collaborators help make the target, measurements and interpretation defensible. Both should be able to explain the complete experiment.
+
+## Submit the shared Chapter 16 assignment
+
+Use [ASSIGNMENT.md](ASSIGNMENT.md) for the 100-point rubric and [SUBMISSION_TEMPLATE.md](SUBMISSION_TEMPLATE.md) for the assessed handoff. The six-sentence worksheet above prepares your interpretation; the assignment also requires a split audit, four-family comparison, zero-identity sensitivity run, and reproduction. Inner manifest row IDs map into the original `row_manifest.csv`, not a renumbered outer-training subset. Keep generated outputs local and submit requested evidence through the learning platform.
