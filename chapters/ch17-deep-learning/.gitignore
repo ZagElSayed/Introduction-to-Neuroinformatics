@@ -1,0 +1,5 @@
+# Notebook kernels may create these beneath the chapter or notebook directory.
+outputs/
+public-data/
+.ipynb_checkpoints/
+*.weights.h5
