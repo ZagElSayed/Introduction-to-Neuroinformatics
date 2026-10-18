@@ -1,6 +1,8 @@
 # Chapter 17 — Deep Learning for Neural Data
 
-Train a compact temporal CNN, audit its information boundary and preserve the exact validation-selected inference checkpoint. This laboratory completes NeuroBridge Phase IX and builds on Chapter 16's independent-unit evaluation.
+Start with the **[notebook studio](NOTEBOOK_GUIDE.md)**: five self-contained, guided notebooks for CNNs, RNN/GRU, Transformers, autoencoders, and real public EEG. Each provides code, small controls, plots, interpretation prompts, and evidence saving. Open each in Colab or Jupyter; no handwritten training loop is required. Use the **[notebook assignment](NOTEBOOK_ASSIGNMENT.md)** and **[reflection template](NOTEBOOK_REFLECTION.md)** for the introductory route.
+
+The material below is the **advanced synthetic PyTorch research track**. It trains a compact temporal CNN, audits its information boundary and preserves a validation-selected inference checkpoint. Both routes support NeuroBridge Phase IX, with different datasets and evaluation units.
 
 ## Scientific contract
 
@@ -51,19 +53,23 @@ The script verifies checkpoint reload predictions. An inference checkpoint is no
 
 CPU runs request deterministic algorithms and one thread. Reproduction means matching source, config, software versions and hardware context; split/prediction/curve comparisons are meaningful in that environment. Runtime, serialized bytes and cross-version/device results are not promised identical. Record an exact dependency lock for durable experiments; the supplied requirements define ranges.
 
-## Assignment — 100 points
+## Research-track assignment — 100 points
 
 1. **Tensor and target contract (15):** Explain shapes, sampling rate, label construction, channel ordering and the distinction between signal epochs and training epochs.
 2. **Partition and preprocessing audit (20):** Verify grouped train/validation/test identity disjointness; contrast row overlaps. Explain train-only normalization and augmentation inheritance.
 3. **Learning and checkpointing (20):** Interpret the curves, lowest validation loss, patience and selected checkpoint. Explain why changing test data must not select a different model.
 4. **Evaluation and classical comparison (15):** Compare participant discrimination, threshold errors and Brier score with the fixed logistic model. Interpret the reliability plot and tiny held-out cohort limitations.
 5. **Sensitivity (15):** Run a copied configuration with another seed or augmentation-noise value to a separate directory; compare checkpoint selection and probability changes. Discuss channel occlusion and computational cost without claiming neural mechanism.
-6. **Reproduction and GitHub reflection (15):** Re-run saved config; compare splits, predictions and curves; submit code/config commit, plots, model card, derivative hashes and a reflection linking NeuroBridge upstream provenance. Keep recordings and generated derivatives outside Git.
+6. **Reproduction and GitHub reflection (15):** Re-run saved config; compare splits, predictions and curves; submit code/config commit, plots, model card, derivative hashes and a reflection linking NeuroBridge upstream provenance (the synthetic generator, source version and seed, not EEG recordings). Keep recordings and generated derivatives outside Git.
 
 ## Graduate extension
 
 Add participant-aware outer evaluation and put architecture choice, normalization, augmentation policy, checkpoint selection and any calibration inside the development boundary. Compare raw waveforms and spectrograms, or compact CNN and attention, with the same participants and a prespecified compute budget. Quantify seed variability separately from participant sampling uncertainty. Add a resume checkpoint and a scientifically justified perturbation. Audit unlabeled pretraining overlap before making unseen-participant claims.
 
-Optional measured-data extension: [PhysioNet EEG Motor Movement/Imagery v1.0.0](https://physionet.org/content/eegmmidb/1.0.0/), DOI [10.13026/C28G6P](https://doi.org/10.13026/C28G6P), under its stated Open Data Commons Attribution License v1.0. Follow release attribution and run/event documentation; labels are motor tasks, not diagnoses. Preserve run timing and participant IDs, specify any resampling and channel subset, and adapt splitting/aggregation for within-person task labels. The synthetic baseline does not download or analyze this release.
+Optional measured-data extension: [PhysioNet EEG Motor Movement/Imagery v1.0.0](https://physionet.org/content/eegmmidb/1.0.0/), DOI [10.13026/C28G6P](https://doi.org/10.13026/C28G6P), under its stated Open Data Commons Attribution License v1.0. Follow release attribution and run/event documentation; labels are motor tasks, not diagnoses. Preserve run timing and participant IDs, specify any resampling and channel subset, and adapt splitting/aggregation for within-person task labels. The synthetic baseline does not download or analyze this release. The separate [public EEG notebook](notebooks/05_public_eeg_cnn.ipynb) implements a bounded measured-data example; it uses within-person task labels and a different evaluation contract.
 
 References: [EEGNet original paper](https://arxiv.org/abs/1611.08024), [PyTorch Conv1d](https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv1d.html), [logits loss](https://docs.pytorch.org/docs/stable/generated/torch.nn.BCEWithLogitsLoss.html), and [reproducibility guidance](https://docs.pytorch.org/docs/stable/notes/randomness.html).
+
+## Execution policy
+
+Chapter 17 CI performs source/JSON/notebook parsing only. It does not run training, execute notebooks, import the lab, or run runtime tests. Notebook execution counts/outputs are initially empty; their source has not been runtime-validated by the authoring assistant. Run locally or in your own hosted runtime and preserve observed results.
