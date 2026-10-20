@@ -1,0 +1,13 @@
+# Chapter 18 public-data discovery assignment — 100 points
+
+Complete the three guided notebooks in [NOTEBOOK_GUIDE.md](NOTEBOOK_GUIDE.md), using [NOTEBOOK_REFLECTION.md](NOTEBOOK_REFLECTION.md). The existing synthetic audit script has a separate advanced rubric; it is an alternative/extension, not a second introductory requirement.
+
+1. **Representation — 20 points.** Explain waveform → channel PSD → average power → dB → quantized pixels. Derive 29×13 and 64×64, state units, temporal coordinates, display reference/bounds, channel averaging, clipping, and information loss. Save one changed-display comparison and the PNG encoding-equivalence check.
+2. **Lineage and boundaries — 20 points.** Trace a derivative through source EDF hash, channel order, window start, numeric PSD, renderer contract, image/file/pixel hashes, and source version. Verify zero participant overlap across the fixed partitions. Explain within-person condition labels, run-order confounding, and why four test condition summaries represent two independent people.
+3. **Model comparison — 20 points.** Trace CNN shapes and loss/logit conventions, selected versus stopped epoch, baseline features and training-only scaling, person-condition aggregation, and fixed threshold. Compare CNN/baseline metrics without claiming significance or diagnosis. Explain why results cannot justify iterative test-driven model selection.
+4. **Review tool — 25 points.** Save a validation inspection and training-gallery retrieval, explain the Grad-CAM target/layer/resolution, and contrast attribution with tile replacement. State the exact replacement value and its limitations. Interpret randomized-parameter comparison and descriptive QC; neither a visually plausible heatmap nor nearby embedding proves physiology.
+5. **Evidence and reflection — 15 points.** Link authored source/configuration commit, exact helper bytes/hash, environment, model, manifest, report, and review record. Demonstrate rejection of a nonexistent panel reference. Explain why schema correctness does not validate an interpretation and identify the human decision boundary.
+
+Run the default configuration before making changes. Declare exploratory alternatives with validation data; record all attempts. Do not select favorable renderers or architectures using test outcomes. Further confirmatory work needs a new defensible evaluation plan.
+
+Submit authored reflection/configuration via Git and the requested evidence through the course system. Do not commit downloaded EDFs, generated image collections, model binaries, or run directories. Keep dataset attribution with outputs. No paid API, GPU, clinical data, or handwritten model-training loop is required. The notebooks contain supplied source, not precomputed results.

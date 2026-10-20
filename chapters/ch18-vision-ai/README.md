@@ -1,5 +1,10 @@
 # Chapter 18 — Vision-Based AI for Neural Signal Interpretation
 
+Start with the **[public-data notebook studio](NOTEBOOK_GUIDE.md)**: three guided Colab/Jupyter notebooks turn real resting EEG into images, train a small recording-condition CNN, and build an interactive visual review tool. All code is supplied. Use the **[notebook assignment](NOTEBOOK_ASSIGNMENT.md)** and **[reflection template](NOTEBOOK_REFLECTION.md)** for the introductory route. No paid API, pretrained weights, or GPU is required. See the guide for public-data licensing, source provenance, participant boundaries, and the limits of this small demonstration.
+
+The material below is the **advanced synthetic PyTorch rendering-audit track**, with its separate 100-point rubric. Its no-VLM and measured-data-extension statements refer to that executable; the new public notebook route supplies its own measured resting-condition experiment and Grad-CAM/retrieval tool.
+
+
 Audit the entire waveform → numeric derivative → image → prediction chain. Complete NeuroBridge Phase X by preserving a visual representation contract and distinguishing file encoding, candidate nuisance shifts and actual source changes.
 
 ## Data and scientific contract
@@ -78,3 +83,4 @@ Compare signal-domain and image-domain models using the same participants; add n
 Optional measured-data source: [PhysioNet EEG Motor Movement/Imagery v1.0.0](https://physionet.org/content/eegmmidb/1.0.0/), DOI [10.13026/C28G6P](https://doi.org/10.13026/C28G6P), under its stated Open Data Commons Attribution License v1.0. Follow release attribution and task/event definitions; no diagnostic labels are supplied. Preserve channel/run selection, sampling rate, preprocessing and participant IDs. Adapt the synthetic one-label-per-person split/aggregation contract for within-person task labels. The executable does not download this release.
 
 References: [PNG specification](https://www.w3.org/TR/png-3/), [CLIP original paper](https://arxiv.org/abs/2103.00020), [Grad-CAM](https://arxiv.org/abs/1610.02391), and [saliency sanity checks](https://arxiv.org/abs/1810.03292).
+
