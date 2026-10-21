@@ -1,0 +1,12 @@
+# Chapter 19 assignment — 100 points
+
+1. **Explain the loop (15):** compare a classifier, a fixed pipeline, this conditional baseline, and an LLM planner. Identify the task goal, observations, choices, effects, and stop states in one real trajectory.
+2. **Inspect the scientific tool (20):** document sampling rate, units, sample count, window, detrending, density normalization, one-sided doubling, frequency bins, band-integration convention, and the energy check. Explain why the output supports no diagnostic claim.
+3. **Implement and compare a planner (15):** implement a recipe-first chooser while preserving the runtime boundary. Compare its verified tool order with the baseline. An optional LLM adapter must return only the documented proposal JSON, use synthetic observations, record model/prompt/version, and be evaluated separately. The provided Ollama adapter is an optional starting point; baseline completion needs no external model.
+4. **Evaluate 20 cases (25):** run `evaluate_cases` in your environment, submit the actual table and two representative logs, and investigate every mismatch. Report task completion, appropriate stops, blocked proposals, attempted calls, and latency separately. Do not invent a success percentage or infer LLM robustness from the deterministic baseline.
+5. **Inspect and record a decision (15):** read the staged JSON report, independently inspect its values and provenance, then record confirm/correct/defer with a rationale tied to the displayed hash. Preserve the original report. Explain why this is not production authentication or final promotion.
+6. **Agent card and reflection (10):** state intended use, data and recipe versions, tools, planner, permissions, outputs, limits, failure behavior, source-code hash, and one useful extension with a measurable benefit.
+
+Submit notebooks or code, source manifest, staged report, run log, separate review record, evaluation table, agent card, and reflection. All notebook outputs must come from your own run. No paid model is required. Use only synthetic/de-identified data within authorized environments.
+
+Graduate extension: compare the same fixed tasks using a baseline, one LLM planner, and a two-role planner/verifier design. Separate model proposal errors from runtime denials and executed side effects; report repeated trials, costs, timeouts, and correlation between repeated failures. Keep held-out tasks out of prompt and policy tuning.
