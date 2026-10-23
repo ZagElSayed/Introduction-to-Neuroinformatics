@@ -15,3 +15,7 @@ Build an inspectable analysis assistant with [three guided notebooks](chapters/c
 ## Chapter 20: brain–computer interfaces
 
 Build a hardware-free, causal EEG replay controller with [three guided notebooks](chapters/ch20-bci-foundations/NOTEBOOK_GUIDE.md). Learn run-separated decoding, bounded cursor commands, fault inhibition, and honest timing/coverage metrics using public PhysioNet recordings. See the [chapter guide](chapters/ch20-bci-foundations/README.md), [replay contract](chapters/ch20-bci-foundations/REPLAY_CONTRACT.md), and [100-point assignment](chapters/ch20-bci-foundations/ASSIGNMENT.md).
+
+## Chapter 21: closed-loop and adaptive neurotechnology
+
+Build a dimensionless feedback simulator with a fixed controller, bounded gain adaptation, fault/stop/recovery logic, and decision reconstruction. Start with the [chapter guide](chapters/ch21-closed-loop/README.md) and [guided notebook](chapters/ch21-closed-loop/01_bounded_adaptive_control.ipynb), then follow the [simulation contract](chapters/ch21-closed-loop/SIMULATION_CONTRACT.md) and [100-point assignment](chapters/ch21-closed-loop/ASSIGNMENT.md). No human recordings, stimulation hardware, GPU, or API key are required.
