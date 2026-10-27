@@ -19,3 +19,7 @@ Build a hardware-free, causal EEG replay controller with [three guided notebooks
 ## Chapter 21: closed-loop and adaptive neurotechnology
 
 Build a dimensionless feedback simulator with a fixed controller, bounded gain adaptation, fault/stop/recovery logic, and decision reconstruction. Start with the [chapter guide](chapters/ch21-closed-loop/README.md) and [guided notebook](chapters/ch21-closed-loop/01_bounded_adaptive_control.ipynb), then follow the [simulation contract](chapters/ch21-closed-loop/SIMULATION_CONTRACT.md) and [100-point assignment](chapters/ch21-closed-loop/ASSIGNMENT.md). No human recordings, stimulation hardware, GPU, or API key are required.
+
+## Chapter 22: real-time systems and edge AI
+
+Make a bounded streaming pipeline fall behind and explain its deadline, freshness, queue, and coverage behavior with the [edge timing studio](chapters/ch22-edge-ai/README.md). The [guided notebook](chapters/ch22-edge-ai/01_edge_timing_studio.ipynb), [timing contract](chapters/ch22-edge-ai/TIMING_CONTRACT.md), and [100-point assignment](chapters/ch22-edge-ai/ASSIGNMENT.md) use a standard-library virtual model, with an optional host measurement adapter. Assigned virtual times are explicitly separated from measured device performance. No headset, human data, GPU, or API key is required.
