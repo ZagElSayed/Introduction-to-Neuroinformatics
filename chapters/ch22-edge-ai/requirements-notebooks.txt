@@ -1,0 +1,3 @@
+# Optional notebook/plotting tools. The helper uses only the Python standard library.
+jupyterlab>=4,<5
+matplotlib>=3.8,<4
