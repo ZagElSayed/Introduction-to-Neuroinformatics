@@ -27,3 +27,8 @@ Make a bounded streaming pipeline fall behind and explain its deadline, freshnes
 ## Chapter 24: computational biomarkers and clinical decision support
 
 Build an inspectable validation dashboard with the [chapter guide](chapters/ch24-biomarker-validation/README.md) and [guided notebook](chapters/ch24-biomarker-validation/01_biomarker_validation_studio.ipynb). The standard-library synthetic studio separates development, calibration, and external cohorts; compares fixed threshold policies; reports calibration, coverage, subgroup outcomes, and scoped uncertainty; and exports research cards and evidence bundles. Read the [study contract](chapters/ch24-biomarker-validation/STUDY_CONTRACT.md) and [100-point assignment](chapters/ch24-biomarker-validation/ASSIGNMENT.md). It demonstrates evaluation mechanics, not a validated EEG biomarker or clinical benefit. Materials were statically inspected; students run and assess their own results.
+
+## Chapter 25: disorder-aware longitudinal cohorts
+
+Build a point-in-time cohort with the [chapter guide](chapters/ch25-longitudinal-cohort/README.md) and [guided notebook](chapters/ch25-longitudinal-cohort/01_longitudinal_cohort_studio.ipynb). The standard-library SQLite studio preserves observation and availability times, exposes deliberate leakage traps, fits transparent development-only models, examines missing-modality robustness, and exports research evidence. Read the [study contract](chapters/ch25-longitudinal-cohort/STUDY_CONTRACT.md) and [100-point assignment](chapters/ch25-longitudinal-cohort/ASSIGNMENT.md). All records are synthetic; the studio does not establish clinical validity or benefit. Materials were inspected statically; students run and assess their own results.
+
