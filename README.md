@@ -1,5 +1,46 @@
 # Introduction-to-Neuroinformatics
 
+Student resources for *Introduction to Neuroinformatics: Data, Computational Models, Intelligent Systems, and Neuroscience*, by Zag ElSayed and Ernest Pedapati.
+
+Start with the [Student Quickstart](docs/STUDENT_QUICKSTART.md), then open the guide for your chapter. Each guide specifies its own data, environment, commands, and assignment; requirements differ across activities. The [book manuscript](https://github.com/ZagElSayed/Introduction-to-Neuroinformatics-Book) contains the scientific explanation and chapter context.
+
+## Find your chapter
+
+| Chapter | Topic | Resources |
+| --- | --- | --- |
+| 1 | Neuroinformatics within Computational Neuroscience | [Chapter guide](chapters/ch01-foundations/README.md) |
+| 2 | Neurobiological Foundations for Computational Modeling | [Chapter guide](chapters/ch02-neurobiology/README.md) |
+| 3 | Mathematical Foundations for Brain Data | [Chapter guide](chapters/ch03-mathematics/README.md) |
+| 4 | Information Technology Foundations and Tools for Neuroinformatics | [Chapter guide](chapters/ch04-it-foundations/README.md) |
+| 5 | Electrophysiological Signals: EEG, MEG, and ECoG | [Chapter guide](chapters/ch05-electrophysiology/README.md) |
+| 6 | Neuroimaging and Multimodal Data | [Chapter guide](chapters/ch06-neuroimaging/README.md) |
+| 7 | Peripheral, Behavioral, and Wearable Signals | [Chapter guide](chapters/ch07-wearables/README.md) |
+| 8 | Experimental Design and Cognitive Paradigms | [Chapter guide](chapters/ch08-experimental-design/README.md) |
+| 9 | Neurodata Formats, Standards, and Metadata | [Chapter guide](chapters/ch09-data-standards/README.md) |
+| 10 | Neuroinformatics Data Pipelines, Infrastructure, and Workflows | [Chapter guide](chapters/ch10-data-pipelines/README.md) |
+| 11 | Ethical, Legal, Privacy, and Governance Considerations in Neuroinformatics | [Chapter guide](chapters/ch11-ethics-governance/README.md) |
+| 12 | Neural Signal Preprocessing and Artifact Modeling | [Chapter guide](chapters/ch12-preprocessing/README.md) |
+| 13 | Time–Frequency and Spectral Analysis | [Chapter guide](chapters/ch13-time-frequency/README.md) |
+| 14 | Source Localization and Spatial Modeling | [Chapter guide](chapters/ch14-source-localization/README.md) |
+| 15 | Network and Graph-Theoretic Brain Models | [Chapter guide](chapters/ch15-brain-networks/README.md) |
+| 16 | Classical Machine Learning for Neuroinformatics | [Chapter guide](chapters/ch16-classical-ml/README.md) |
+| 17 | Deep Learning for Neural Data | [Chapter guide](chapters/ch17-deep-learning/README.md) |
+| 18 | Vision-Based AI for Neural Signal Interpretation | [Chapter guide](chapters/ch18-vision-ai/README.md) |
+| 19 | AI Agents and Intelligent Neuroinformatics Automation | [Chapter guide](chapters/ch19-ai-agents/README.md) |
+| 20 | Foundations of Brain–Computer Interfaces | [Chapter guide](chapters/ch20-bci-foundations/README.md) |
+| 21 | Closed-Loop and Adaptive Neurotechnology | [Chapter guide](chapters/ch21-closed-loop/README.md) |
+| 22 | Real-Time Neuroinformatics Systems and Edge AI | [Chapter guide](chapters/ch22-edge-ai/README.md) |
+| 23 | Cloud, Edge, and Cyber-Physical Systems for Neurotechnology | [Manuscript lab](https://github.com/ZagElSayed/Introduction-to-Neuroinformatics-Book/blob/main/chapters/ch23.tex) · companion pack pending |
+| 24 | Computational Biomarkers and Clinical Decision Support | [Chapter guide](chapters/ch24-biomarker-validation/README.md) |
+| 25 | Neuroinformatics Applications in Brain Disorders | [Chapter guide](chapters/ch25-longitudinal-cohort/README.md) |
+| 26 | Precision Neurology and Personalized Neurotechnology | [Chapter guide](chapters/ch26-personalization/README.md) |
+| 27 | Generative AI and Foundation Models for Neuroscience | [Chapter guide](chapters/ch27-foundation-models/README.md) |
+| 28 | The Future of Neuroinformatics: From Brain Data to Intelligent Neurotechnology | [Chapter guide](chapters/ch28-capstone/README.md) |
+
+Chapter 23's exercise is currently provided in the manuscript. Its dedicated student pack has not yet been added. The remaining links identify available guides, not a certification that every exercise has been execution-verified. Follow each guide's stated verification status and report your own observed results.
+
+## Selected laboratory introductions
+
 ## Chapter 16: classical machine learning
 
 Start with the [Chapter 16 guide](chapters/ch16-classical-ml/README.md), then follow the [assignment and rubric](chapters/ch16-classical-ml/ASSIGNMENT.md). The chapter uses synthetic data to teach participant-aware evaluation and a traceable NeuroBridge prediction workflow.
