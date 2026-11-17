@@ -22,3 +22,13 @@ Include a plot or output, an explanation of the underlying physiology or mathema
 ## Classroom assignment and rubric
 
 See [ASSIGNMENT.md](ASSIGNMENT.md) for learning outcomes, step-by-step tasks, expected observations, undergraduate and graduate requirements, the 100-point rubric, and troubleshooting guidance.
+
+## Appendix A: known-answer FFT check
+
+The book appendix includes a synthetic 10-Hz, 20-microvolt sinusoid sampled at 250 Hz. From the repository root, run:
+
+```bash
+python chapters/ch03-mathematics/appendix_fft_quickcheck.py
+```
+
+The script checks the array shape, frequency axis, dominant frequency, and amplitude. Expect values close to `10.0 20.0`; the final digits may differ through floating-point rounding. This bin-centered example is not a general EEG band-power estimator.
