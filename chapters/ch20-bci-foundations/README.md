@@ -21,6 +21,8 @@ On Windows, activate with `.venv\Scripts\activate`; on macOS/Linux use `source .
 
 Run cells in order. The loader downloads only the three specified EDFs when not cached and preserves the originals. Outputs are unique JSON files under `bci_outputs/`. The helpers do not run when this guide is read.
 
-The checked-in notebooks have empty outputs. Materials were statically reviewed; no runtime performance is asserted. Package ranges are compatibility targets, not a tested lockfile; record installed versions. See the [exact replay contract](REPLAY_CONTRACT.md), [reflection](REFLECTION.md), and [primary resources](RESOURCES.md).
+The checked-in notebooks have empty outputs. The recorded-data notebooks have undergone bounded author execution with actual public EDFs; see the verification report below. No live performance is established. Package ranges are compatibility targets, not a tested lockfile; record installed versions. See the [exact replay contract](REPLAY_CONTRACT.md), [reflection](REFLECTION.md), and [primary resources](RESOURCES.md).
 
 This is recorded-data software replay. It does not establish spontaneous-intent decoding, physical feedback timing, user learning, clinical efficacy, or an operational device safety case. The independent safety supervisor and live timing validation discussed in the book are further engineering work.
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.

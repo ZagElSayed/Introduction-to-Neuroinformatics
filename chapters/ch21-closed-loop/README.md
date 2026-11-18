@@ -48,3 +48,5 @@ A recorded-data replay cannot reveal the biological outcome of an action that wa
 - [CRED-nf checklist](https://doi.org/10.1093/brain/awaa009): neurofeedback evaluation and reporting.
 
 The toy coefficients and action limits are not physiological parameters or a stimulation prescription.
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.

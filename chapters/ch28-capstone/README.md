@@ -19,7 +19,7 @@ python -m pip install -r requirements-notebooks.txt
 python -m jupyterlab
 ```
 
-Installation needs package access; the exercise itself needs no network service. Select the environment's Python kernel. Keep the notebook beside the helper, restart the kernel, and run from the top. All submitted notebook outputs are initially empty. Authors performed static inspection only; students execute and interpret their own results. No measured accuracy, latency, or fault outcome is supplied in advance.
+Installation needs package access; the exercise itself needs no network service. Select the environment's Python kernel. Keep the notebook beside the helper, restart the kernel, and run from the top. All submitted notebook outputs are initially empty. Following initial static inspection, bounded author verification executed the notebook code cells; students must still execute and interpret their own results. No measured accuracy, latency, or fault outcome is supplied in advance.
 
 ## What you build
 
@@ -42,3 +42,5 @@ Role and network flags are supplied inputs, not production identity or network t
 ## Reuse and extension
 
 Run the default protocol before changing it, preserve the original output directory, and report any redesign as a new study. Real recordings require rights, acquisition-aware conversion, new reference judgments, and independent evaluation. A real service also requires evaluated identity, permissions, timing, failure handling, monitoring, and deployment controls. No automated update or deployment is part of the studio.
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.

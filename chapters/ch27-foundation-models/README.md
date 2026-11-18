@@ -8,7 +8,7 @@ No patient data, external model service, API key, GPU, or downloaded weights are
 Read [STUDY_CONTRACT.md](STUDY_CONTRACT.md), open
 [foundation_model_studio.ipynb](foundation_model_studio.ipynb), and submit the
 [100-point assignment](ASSIGNMENT.md). All notebook outputs are intentionally empty.
-The materials were reviewed statically; students must execute and assess the results.
+The core and optional CPU PyTorch routes have undergone bounded author execution; students must still execute and assess their own results.
 
 ## Local setup
 
@@ -33,7 +33,7 @@ PyTorch wheels depend on operating system and Python version. If pip cannot reso
 a wheel, use the [official installation selector](https://pytorch.org/get-started/locally/)
 with CPU selected. Installation needs network access; the exercises then run offline.
 Record the installed Python/PyTorch versions and your environment lock or package list.
-No runtime, performance, or cross-platform reproducibility result is claimed here.
+The verification report records code-cell execution in one environment; cross-platform reproducibility and operational performance remain unestablished.
 
 ## Two routes through the notebook
 
@@ -85,3 +85,5 @@ the same invented recipe, so it is not a test of hospital or disease generalizat
 
 Inspect each paper's own corpus, evaluation, code, weights, and licensing before reuse.
 Availability of a repository does not establish rights to all associated data or weights.
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.

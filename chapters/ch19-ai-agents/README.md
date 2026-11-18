@@ -11,7 +11,7 @@ The core uses **Python 3.10+ and the standard library**. No GPU, API key, extern
 3. Try `python run_demo.py --dataset toy_missing_units` and compare the stop reason.
 4. Run `python run_demo.py --evaluate --output agent_outputs` to generate the 20-case evaluation table in your environment.
 
-These are student-run commands. The authored materials were checked statically; runtime results and timings are not claimed in advance.
+These are student-run commands. The scripted notebooks have now undergone bounded author execution; see the verification report below. Your own runtime results and timings still need to be measured.
 
 ## What you build
 
@@ -46,3 +46,5 @@ See [ASSIGNMENT.md](ASSIGNMENT.md), [REFLECTION.md](REFLECTION.md), and [RESOURC
 Notebook 02 includes an opt-in cell for `ollama_planner.py`. Install Ollama separately using its official instructions and select an installed local model appropriate to your machine. Set `ENABLE_LLM = True` and enter its exact name. The adapter sends synthetic state to `127.0.0.1:11434/api/chat`, requests a schema-shaped JSON proposal, and returns it to the same runtime. No model is downloaded or called by default. No particular hardware, model success, or latency is promised. Use a local runtime; a hosted Colab kernel cannot reach your laptop's loopback address.
 
 Retain the adapter trace, Ollama version, and installed model identity/digest. Temperature zero does not guarantee identical trajectories. Request timeouts and bounded response size limit a call, while the runtime limits total attempts; deployment still needs stronger process and service isolation. The optional adapter has received static checks only.
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.
