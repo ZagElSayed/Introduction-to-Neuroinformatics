@@ -16,7 +16,7 @@ Version: `ch24-validation-v1`. This contract describes a synthetic evaluation ex
 
 For a generated latent number z, generating risk is `logistic(-0.6 + site_offset + 1.2*z)`, with offsets 0, -0.35, -0.70. A binary outcome is sampled from that risk. The fixed candidate score is `sqrt(risk)`, clipped to [0.01,0.99]. This is a deliberately distorted teaching score, not an EEG predictor or an already validated probability.
 
-The random stream and draw order are part of the helper. Record seed, helper bytes/version, Python version, and cohort size for reproduction. The site change alters the conditional outcome relationship as well as baseline event frequency; it is not pure label shift. The separate prevalence scenario holds sensitivity/specificity fixed by definition.
+The random stream and draw order are part of the helper. Record seed, helper bytes/version, Python version, and cohort size for reproduction. The offset changes the conditional risk given the latent variable z, the score distribution, and the event frequency. Away from clipping boundaries, risk = score² at every site: the generator does not impose a different outcome probability for the same original score across sites. Distinguish this from a changing score-to-risk relationship. It is also not pure label shift. The separate prevalence scenario holds sensitivity/specificity fixed by definition.
 
 The quality-acceptance probability is 0.92 in G1 and 0.80 in G2. Supported-input and score-presence probabilities are 0.94 and 0.96. These arbitrary settings create coverage questions; G1/G2 have no demographic interpretation. The support flag is supplied by the fixture, not inferred by an OOD detector.
 
@@ -45,4 +45,5 @@ Prediction cards exclude later outcomes. Evaluation rows retain outcomes separat
 
 `save_bundle` creates a new timestamped directory containing JSON and its SHA-256 receipt. The digest supports byte comparison, not authentication, immutability, or clinical validation. The helper performs no network access, clinical integration, model training, or physical action.
 
-The authoring process statically inspected the code and notebook; it did not run the generator, calibration, evaluation, bootstrap, or export. Run and inspect all results yourself. Report environment and failures as well as favorable observations.
+The initial authoring pass was static. A subsequent publication review executed the default generator, calibration, evaluation, bootstrap, export, and all eight notebook code cells. See EXECUTION_REVIEW.md for the actual environment, observed results, and limits. This synthetic execution does not validate real physiology, clinical transportability, or patient benefit. Run and inspect all results yourself; report environment and failures as well as favorable observations.
+
