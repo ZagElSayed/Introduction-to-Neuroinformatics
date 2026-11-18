@@ -69,6 +69,7 @@ def test_notebook_cells_execute(tmp_path, monkeypatch):
         if cell["cell_type"] == "code":
             code = "".join(cell["source"])
             exec(compile(code, "<Chapter 6 notebook cell>", "exec"), globals_dict)
-    assert (lab / "outputs/ch06/analysis_summary.json").is_file()
+    # The notebook writes relative to the deliberately isolated working directory.
+    assert (tmp_path / "outputs/ch06/analysis_summary.json").is_file()
     assert np.isfinite(globals_dict["corr_detrended"]).all()
     assert globals_dict["corr_detrended"].shape == (4, 4)
