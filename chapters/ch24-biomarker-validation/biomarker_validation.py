@@ -1,7 +1,8 @@
 """Chapter 24 synthetic validation studio; Python 3.11+, standard library only.
 
 No EEG, diagnosis, clinical recommendation, fitted predictor, or validated probability.
-Authoring validation is static; students must execute and inspect their own results.
+Synthetic execution coverage is recorded in EXECUTION_REVIEW.md.
+Students must execute and inspect their own results.
 """
 from __future__ import annotations
 

@@ -54,4 +54,5 @@ Important distinctions:
 
 Chapter 23 supplied distributed records and outcome boundaries. This studio does not import or pretend to implement its transport or identity mechanisms. It adds the distinction between source data, a score, calibration, a threshold policy, a prediction-time card, and later evaluation evidence. A real-data, clinical integration, prospective study, or treatment-effect extension needs a separate justified plan.
 
-The code and notebook have been statically inspected only. No results are precomputed. Students must run, inspect, and document their own results before drawing conclusions.
+The default synthetic workflow has now been executed; [EXECUTION_REVIEW.md](EXECUTION_REVIEW.md) records the environment, observed counts, independent metric checks, regression coverage, and limitations. All eight notebook code cells ran sequentially in an isolated Python process with a noninteractive plotting backend. This was not a Jupyter-kernel or browser-interface test. The distributed notebook retains empty outputs. Students must run, inspect, and document their own results before drawing conclusions.
+
