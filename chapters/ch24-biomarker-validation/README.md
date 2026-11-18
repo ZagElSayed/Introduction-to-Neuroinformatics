@@ -56,3 +56,5 @@ Chapter 23 supplied distributed records and outcome boundaries. This studio does
 
 The default synthetic workflow has now been executed; [EXECUTION_REVIEW.md](EXECUTION_REVIEW.md) records the environment, observed counts, independent metric checks, regression coverage, and limitations. All eight notebook code cells ran sequentially in an isolated Python process with a noninteractive plotting backend. This was not a Jupyter-kernel or browser-interface test. The distributed notebook retains empty outputs. Students must run, inspect, and document their own results before drawing conclusions.
 
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.

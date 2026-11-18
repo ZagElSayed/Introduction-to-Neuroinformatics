@@ -15,7 +15,7 @@ python -m pip install -r requirements-notebooks.txt
 python -m jupyterlab
 ```
 
-Run the notebook from this folder so it can import the adjacent helper. Cells are saved without outputs. Materials were inspected statically; no helper functions or notebook cells were executed during authoring. Students must run them and report their own results or errors. No performance outcome is promised.
+Run the notebook from this folder so it can import the adjacent helper. Cells are saved without outputs. Initial preparation used static inspection; subsequent bounded author execution ran the notebook code cells and helper. Students must run them and report their own results or errors. No performance outcome is promised.
 
 ## What you build
 
@@ -39,3 +39,5 @@ The calibration cohort is used for descriptive inspection without changing the m
 - A new timestamped bundle with SQL fixture, cohort, references, model configurations, summaries, research cards, and SHA-256 receipts. Receipts support byte comparison; they are not authentication or immutable storage.
 
 The experiment demonstrates cohort and evaluation mechanics. It does not validate a disease biomarker, process EEG, perform clinical harmonization, connect to an EHR, handle censoring, estimate treatment effects, or evaluate clinical impact. Continue to Chapter 26 only with those boundaries clear.
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.

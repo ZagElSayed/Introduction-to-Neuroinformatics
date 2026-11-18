@@ -2,7 +2,7 @@
 
 Follow one invented longitudinal study from a frozen personal baseline to held-out prediction, then inspect a **separate randomized utility experiment** and a bounded software-gain state machine. The exercise teaches information handling and evidence boundaries. It models no neurological disorder and supports no clinical action.
 
-Read [STUDY_CONTRACT.md](STUDY_CONTRACT.md), open [personalization_studio.ipynb](personalization_studio.ipynb), then complete [ASSIGNMENT.md](ASSIGNMENT.md). The notebook is supplied without outputs; execute it yourself and interpret your results. The helper was inspected statically during authoring; simulator and notebook execution were not performed by the authoring assistant.
+Read [STUDY_CONTRACT.md](STUDY_CONTRACT.md), open [personalization_studio.ipynb](personalization_studio.ipynb), then complete [ASSIGNMENT.md](ASSIGNMENT.md). The notebook is supplied without outputs; execute it yourself and interpret your results. After initial static inspection, bounded author verification executed the notebook code cells and simulator; see the verification report below.
 
 Use Python 3.11 or later. All calculations in `precision_studio.py` use the standard library. For the notebook interface and optional plot, install the packages listed in `requirements-notebooks.txt` in your own environment. Run the notebook from this directory so its local helper import resolves. No patient data, GPU, account, or service is required.
 
@@ -31,3 +31,5 @@ The utility experiment's `baseline_risk` is a constructed ranking variable, **no
 `decide_gain` changes an abstract parameter in `[0,1]`, with maximum step `0.1`. Its default permission is false. Explicitly pass each returned `next_state` to carry gain and freeze history forward. A Boolean teaching flag is not an authentication mechanism; numeric clipping is not a proof of physical safety. No requalification or automatic reset is implemented.
 
 `export_bundle` creates a new timestamped `outputs/precision-*` directory. It writes separate observations, outcomes, randomized observations, simulator truth, models, reports, decisions, and a manifest. `sha256.json` covers the other exported files, not itself. The receipt supports byte comparisons; it supplies no authentication or immutability. No numerical results or clinical performance claims are supplied in advance.
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.

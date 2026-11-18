@@ -1,0 +1,3030 @@
+{
+  "date": "2026-11-17",
+  "companion_baseline": "79f3cc366a7f021711c22446c2117f54bb6dff50",
+  "reports": [
+    {
+      "notebook": "chapters/ch19-ai-agents/notebooks/01_understand_the_loop.ipynb",
+      "mode": "default",
+      "notebook_sha256": "068db86a2f214546aed151214e7e4af4c17b44e05dd5d5fb441cc26660eb6bfd",
+      "executed_code_cells": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "agent_studio.py": "5e1759dcbdc17ef6a38c423dfa34d493c04a5af8f165e9e3b71ed3462c70de24",
+        "ollama_planner.py": "2f5b70038234e0e07682cef42db038e69bd470f0716cd261b9f501096ea5cbde",
+        "run_demo.py": "9cb36d691b0b18656a23b0b0a8498caa2bc8ceb6c2348b000567cd0c60a4c46c"
+      },
+      "observations": {
+        "run": {
+          "status": "ready_for_review",
+          "reason": "verified report staged"
+        }
+      },
+      "elapsed_seconds": 0.47929899799964915,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch19-ai-agents/notebooks/02_build_an_analysis_assistant.ipynb",
+      "mode": "default",
+      "notebook_sha256": "9a6eecc6102e3a686a46b6582970cb27744032e17ca139295c13d8a402767bbd",
+      "executed_code_cells": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "agent_studio.py": "5e1759dcbdc17ef6a38c423dfa34d493c04a5af8f165e9e3b71ed3462c70de24",
+        "ollama_planner.py": "2f5b70038234e0e07682cef42db038e69bd470f0716cd261b9f501096ea5cbde",
+        "run_demo.py": "9cb36d691b0b18656a23b0b0a8498caa2bc8ceb6c2348b000567cd0c60a4c46c"
+      },
+      "observations": {
+        "run": {
+          "status": "ready_for_review",
+          "reason": "verified report staged"
+        }
+      },
+      "elapsed_seconds": 0.46664342200074316,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch19-ai-agents/notebooks/03_evaluate_and_review.ipynb",
+      "mode": "default",
+      "notebook_sha256": "a3c56443a5afe3829672d2971b38b13ef04802f9d42974b3f5e6ad4beac913d7",
+      "executed_code_cells": [
+        1,
+        2,
+        4,
+        6,
+        8
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "agent_studio.py": "5e1759dcbdc17ef6a38c423dfa34d493c04a5af8f165e9e3b71ed3462c70de24",
+        "ollama_planner.py": "2f5b70038234e0e07682cef42db038e69bd470f0716cd261b9f501096ea5cbde",
+        "run_demo.py": "9cb36d691b0b18656a23b0b0a8498caa2bc8ceb6c2348b000567cd0c60a4c46c"
+      },
+      "observations": {
+        "run": {
+          "status": "ready_for_review",
+          "reason": "verified report staged"
+        },
+        "expected_case_matches": true
+      },
+      "elapsed_seconds": 0.6180183609994856,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch21-closed-loop/01_bounded_adaptive_control.ipynb",
+      "mode": "default",
+      "notebook_sha256": "800372d2fc248ab76352c652d9cb826df568cb4defbd50dada59107f3388dcd4",
+      "executed_code_cells": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14
+      ],
+      "skipped_install_cells": [],
+      "status": "expected_freeze_gate",
+      "helper_sha256": {
+        "adaptive_sandbox.py": "3e3eaf24f573d3621c5ffea1a6595c6f9671f8c2feda7178b81c6f748d07936d"
+      },
+      "gate_cell": 15,
+      "gate_reason": "Document and freeze your procedure before running final scenarios.",
+      "observations": {
+        "fixed": {
+          "steps": 240,
+          "active_steps": 238,
+          "active_coverage": 0.9916666666666667,
+          "all_step_latent_mae": 0.1649436187916203,
+          "all_step_time_in_band_fraction": 0.5791666666666667,
+          "normalized_action_sum": 39.211422531803635,
+          "action_total_variation": 2.659534642456438,
+          "fallback_steps": 0,
+          "stopped_steps": 0,
+          "warmup_steps": 2,
+          "limited_steps": 4,
+          "gain_updates": 0
+        },
+        "adaptive": {
+          "steps": 240,
+          "active_steps": 238,
+          "active_coverage": 0.9916666666666667,
+          "all_step_latent_mae": 0.12974417403916771,
+          "all_step_time_in_band_fraction": 0.725,
+          "normalized_action_sum": 43.90500889695658,
+          "action_total_variation": 3.935656842727278,
+          "fallback_steps": 0,
+          "stopped_steps": 0,
+          "warmup_steps": 2,
+          "limited_steps": 4,
+          "gain_updates": 10
+        },
+        "faulted": {
+          "steps": 240,
+          "active_steps": 222,
+          "active_coverage": 0.925,
+          "all_step_latent_mae": 0.14990717276404705,
+          "all_step_time_in_band_fraction": 0.6333333333333333,
+          "normalized_action_sum": 41.40676383141635,
+          "action_total_variation": 4.67519741375877,
+          "fallback_steps": 3,
+          "stopped_steps": 5,
+          "warmup_steps": 10,
+          "limited_steps": 10,
+          "gain_updates": 7
+        },
+        "audit_result": {
+          "decision_reconstruction": true,
+          "bounds_and_modes": true,
+          "checked_steps": 240
+        }
+      },
+      "elapsed_seconds": 0.7046621220006273,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch21-closed-loop/01_bounded_adaptive_control.ipynb",
+      "mode": "frozen",
+      "notebook_sha256": "800372d2fc248ab76352c652d9cb826df568cb4defbd50dada59107f3388dcd4",
+      "executed_code_cells": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        15
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "adaptive_sandbox.py": "3e3eaf24f573d3621c5ffea1a6595c6f9671f8c2feda7178b81c6f748d07936d"
+      },
+      "observations": {
+        "fixed": {
+          "steps": 240,
+          "active_steps": 238,
+          "active_coverage": 0.9916666666666667,
+          "all_step_latent_mae": 0.1649436187916203,
+          "all_step_time_in_band_fraction": 0.5791666666666667,
+          "normalized_action_sum": 39.211422531803635,
+          "action_total_variation": 2.659534642456438,
+          "fallback_steps": 0,
+          "stopped_steps": 0,
+          "warmup_steps": 2,
+          "limited_steps": 4,
+          "gain_updates": 0
+        },
+        "adaptive": {
+          "steps": 240,
+          "active_steps": 238,
+          "active_coverage": 0.9916666666666667,
+          "all_step_latent_mae": 0.12974417403916771,
+          "all_step_time_in_band_fraction": 0.725,
+          "normalized_action_sum": 43.90500889695658,
+          "action_total_variation": 3.935656842727278,
+          "fallback_steps": 0,
+          "stopped_steps": 0,
+          "warmup_steps": 2,
+          "limited_steps": 4,
+          "gain_updates": 10
+        },
+        "faulted": {
+          "steps": 240,
+          "active_steps": 222,
+          "active_coverage": 0.925,
+          "all_step_latent_mae": 0.14990717276404705,
+          "all_step_time_in_band_fraction": 0.6333333333333333,
+          "normalized_action_sum": 41.40676383141635,
+          "action_total_variation": 4.67519741375877,
+          "fallback_steps": 3,
+          "stopped_steps": 5,
+          "warmup_steps": 10,
+          "limited_steps": 10,
+          "gain_updates": 7
+        },
+        "audit_result": {
+          "decision_reconstruction": true,
+          "bounds_and_modes": true,
+          "checked_steps": 240
+        }
+      },
+      "elapsed_seconds": 0.6743134890002693,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch22-edge-ai/01_edge_timing_studio.ipynb",
+      "mode": "default",
+      "notebook_sha256": "291eb7678761b2101ee99d4a1c3759868dff239770d0c48a55d9baba147221a0",
+      "executed_code_cells": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        25
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "ch22_baseline/edge_timing.py": "bf06749a4749b94589b71ed665625e2a1d376be85b718bcf8757fb1ed3819e86",
+        "edge_timing.py": "bf06749a4749b94589b71ed665625e2a1d376be85b718bcf8757fb1ed3819e86"
+      },
+      "observations": {
+        "nominal": {
+          "expected_windows": 80,
+          "completed_jobs": 80,
+          "status_counts": {
+            "released": 80
+          },
+          "max_waiting": 1,
+          "on_time_release_fraction": 1.0,
+          "no_on_time_release_fraction": 0.0,
+          "completed_late": 0,
+          "completed_age_p50_ms": 25,
+          "completed_age_p95_ms": 25,
+          "completed_age_p99_ms": 25
+        },
+        "fifo": {
+          "expected_windows": 80,
+          "completed_jobs": 73,
+          "status_counts": {
+            "expired_before_start": 7,
+            "inference_timeout": 3,
+            "late_completion": 50,
+            "released": 20
+          },
+          "max_waiting": 8,
+          "on_time_release_fraction": 0.25,
+          "no_on_time_release_fraction": 0.75,
+          "completed_late": 52,
+          "completed_age_p50_ms": 101,
+          "completed_age_p95_ms": 101,
+          "completed_age_p99_ms": 181
+        },
+        "latest": {
+          "expected_windows": 80,
+          "completed_jobs": 70,
+          "status_counts": {
+            "inference_timeout": 3,
+            "released": 67,
+            "superseded": 10
+          },
+          "max_waiting": 1,
+          "on_time_release_fraction": 0.8375,
+          "no_on_time_release_fraction": 0.16249999999999998,
+          "completed_late": 2,
+          "completed_age_p50_ms": 41,
+          "completed_age_p95_ms": 41,
+          "completed_age_p99_ms": 109
+        },
+        "faults": {
+          "expected_windows": 80,
+          "completed_jobs": 67,
+          "status_counts": {
+            "expired_at_arrival": 1,
+            "inference_timeout": 3,
+            "invalid_quality": 1,
+            "missing": 1,
+            "released": 64,
+            "superseded": 10
+          },
+          "max_waiting": 1,
+          "on_time_release_fraction": 0.8,
+          "no_on_time_release_fraction": 0.19999999999999996,
+          "completed_late": 2,
+          "completed_age_p50_ms": 41,
+          "completed_age_p95_ms": 41,
+          "completed_age_p99_ms": 109
+        }
+      },
+      "elapsed_seconds": 0.6383784119998381,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch24-biomarker-validation/01_biomarker_validation_studio.ipynb",
+      "mode": "default",
+      "notebook_sha256": "2cc3e61ca82bfecd95f159324a7e77a18e190ad56cc43a2f43cb93f814877c62",
+      "executed_code_cells": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "biomarker_validation.py": "8551d43ac505199103da681fb451f3420e90b3f3bef0c81aa71d06adeedb1353"
+      },
+      "observations": {},
+      "elapsed_seconds": 0.5996950910002852,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch25-longitudinal-cohort/01_longitudinal_cohort_studio.ipynb",
+      "mode": "default",
+      "notebook_sha256": "c0d234b19946ae34c18dae8f46997dd5b187c1aaeca67d174ad828182001f725",
+      "executed_code_cells": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "cohort_studio.py": "9853267d8bd81e193a4661e735bc6aa093dd8c2c41f7b48324d248f06294e9e3"
+      },
+      "observations": {},
+      "elapsed_seconds": 0.7019428099993092,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch26-personalization/personalization_studio.ipynb",
+      "mode": "default",
+      "notebook_sha256": "ec06c1c79add81f01518890c3df85713791dac02f1ad16c5695fc89b9f7e94e3",
+      "executed_code_cells": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "precision_studio.py": "0fb5f8280646cef3cd1ce188ba14c6fb4d198351aa7c994ffdafe69aafcc0c6f"
+      },
+      "observations": {
+        "validation": {
+          "raw": {
+            "cohort": "validation",
+            "n_windows": 1500,
+            "n_people": 60,
+            "eligible": 1185,
+            "n_eligible_people": 56,
+            "coverage": 0.79,
+            "brier": 0.24858560355434367,
+            "auc": 0.5225844417020887,
+            "calibration": [
+              {
+                "lower": 0.0,
+                "upper": 0.2,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 65,
+                "predicted": 0.37505484406818873,
+                "observed": 0.36923076923076925
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.6,
+                "n": 1120,
+                "predicted": 0.46027887908115556,
+                "observed": 0.47946428571428573
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.8,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 1.0,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "limits": "Repeated windows are dependent; no intervals or person-level calibration established."
+          },
+          "personal": {
+            "cohort": "validation",
+            "n_windows": 1500,
+            "n_people": 60,
+            "eligible": 1185,
+            "n_eligible_people": 56,
+            "coverage": 0.79,
+            "brier": 0.24454590037085353,
+            "auc": 0.5577208738973445,
+            "calibration": [
+              {
+                "lower": 0.0,
+                "upper": 0.2,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 139,
+                "predicted": 0.37492985137434387,
+                "observed": 0.45323741007194246
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.6,
+                "n": 998,
+                "predicted": 0.46919347691242846,
+                "observed": 0.4649298597194389
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.8,
+                "n": 48,
+                "predicted": 0.6416452881601139,
+                "observed": 0.7083333333333334
+              },
+              {
+                "lower": 0.8,
+                "upper": 1.0,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "limits": "Repeated windows are dependent; no intervals or person-level calibration established."
+          }
+        },
+        "evaluation": {
+          "raw": {
+            "cohort": "evaluation",
+            "n_windows": 1500,
+            "n_people": 60,
+            "eligible": 1179,
+            "n_eligible_people": 56,
+            "coverage": 0.786,
+            "brier": 0.24799317650470715,
+            "auc": 0.5361241877256318,
+            "calibration": [
+              {
+                "lower": 0.0,
+                "upper": 0.2,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 44,
+                "predicted": 0.3871262588337689,
+                "observed": 0.36363636363636365
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.6,
+                "n": 1135,
+                "predicted": 0.4616878779429414,
+                "observed": 0.47400881057268723
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.8,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.8,
+                "upper": 1.0,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "limits": "Repeated windows are dependent; no intervals or person-level calibration established."
+          },
+          "personal": {
+            "cohort": "evaluation",
+            "n_windows": 1500,
+            "n_people": 60,
+            "eligible": 1179,
+            "n_eligible_people": 56,
+            "coverage": 0.786,
+            "brier": 0.24394482158615968,
+            "auc": 0.5614382671480145,
+            "calibration": [
+              {
+                "lower": 0.0,
+                "upper": 0.2,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              },
+              {
+                "lower": 0.2,
+                "upper": 0.4,
+                "n": 179,
+                "predicted": 0.3720410538827656,
+                "observed": 0.441340782122905
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.6,
+                "n": 929,
+                "predicted": 0.4692954362512444,
+                "observed": 0.45317545748116256
+              },
+              {
+                "lower": 0.6,
+                "upper": 0.8,
+                "n": 71,
+                "predicted": 0.643141375671961,
+                "observed": 0.7605633802816901
+              },
+              {
+                "lower": 0.8,
+                "upper": 1.0,
+                "n": 0,
+                "predicted": null,
+                "observed": null
+              }
+            ],
+            "limits": "Repeated windows are dependent; no intervals or person-level calibration established."
+          }
+        },
+        "utility_comparison": {
+          "baseline_risk": {
+            "budget": 15,
+            "selected": [
+              "e-000",
+              "e-002",
+              "e-012",
+              "e-014",
+              "e-020",
+              "e-022",
+              "e-026",
+              "e-028",
+              "e-030",
+              "e-038",
+              "e-044",
+              "e-046",
+              "e-048",
+              "e-050",
+              "e-058"
+            ],
+            "n_selected": 15,
+            "known_expected_utility": 3.710419046560625
+          },
+          "estimated_net_utility": {
+            "budget": 15,
+            "selected": [
+              "e-001",
+              "e-005",
+              "e-009",
+              "e-013",
+              "e-017",
+              "e-021",
+              "e-025",
+              "e-029",
+              "e-033",
+              "e-037",
+              "e-041",
+              "e-045",
+              "e-049",
+              "e-053",
+              "e-057"
+            ],
+            "n_selected": 15,
+            "known_expected_utility": 4.400419046560625
+          },
+          "oracle_net_utility": {
+            "budget": 15,
+            "selected": [
+              "e-001",
+              "e-005",
+              "e-009",
+              "e-013",
+              "e-017",
+              "e-021",
+              "e-025",
+              "e-029",
+              "e-033",
+              "e-037",
+              "e-041",
+              "e-045",
+              "e-049",
+              "e-053",
+              "e-057"
+            ],
+            "n_selected": 15,
+            "known_expected_utility": 4.400419046560625
+          }
+        }
+      },
+      "elapsed_seconds": 1.5901170119996095,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch27-foundation-models/foundation_model_studio.ipynb",
+      "mode": "default",
+      "notebook_sha256": "ebd5bae5f2e92dca103ce2df9749cb90b9956e4c752600cc0944dbac5d53006c",
+      "executed_code_cells": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "foundation_studio.py": "3b5e3f01e71d2f3b0f5fe6fd5e0a61a43f64b5b4a2e8a20e6359fd364f82897a",
+        "torch_studio.py": "ded6ecbbd28b004f559f02e35e73c06acd4b2ad5dbbbeb5bd02578624f77eaba"
+      },
+      "observations": {},
+      "elapsed_seconds": 0.7098074280002038,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch27-foundation-models/foundation_model_studio.ipynb",
+      "mode": "torch",
+      "notebook_sha256": "ebd5bae5f2e92dca103ce2df9749cb90b9956e4c752600cc0944dbac5d53006c",
+      "executed_code_cells": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "foundation_studio.py": "3b5e3f01e71d2f3b0f5fe6fd5e0a61a43f64b5b4a2e8a20e6359fd364f82897a",
+        "torch_studio.py": "ded6ecbbd28b004f559f02e35e73c06acd4b2ad5dbbbeb5bd02578624f77eaba"
+      },
+      "observations": {
+        "neural_report": {
+          "seed": 2701,
+          "torch": "2.6.0+cpu",
+          "device": "cpu",
+          "split_people": {
+            "development": 12,
+            "evaluation": 6,
+            "validation": 6
+          },
+          "torch_helper_sha256": "ded6ecbbd28b004f559f02e35e73c06acd4b2ad5dbbbeb5bd02578624f77eaba",
+          "label_people": [
+            "d-000",
+            "d-001",
+            "d-002",
+            "d-003",
+            "d-004",
+            "d-005"
+          ],
+          "pretraining_record_ids": [
+            "d-000-s0-w0",
+            "d-000-s0-w1",
+            "d-000-s1-w0",
+            "d-000-s1-w1",
+            "d-001-s0-w0",
+            "d-001-s0-w1",
+            "d-001-s1-w0",
+            "d-001-s1-w1",
+            "d-002-s0-w0",
+            "d-002-s0-w1",
+            "d-002-s1-w0",
+            "d-002-s1-w1",
+            "d-003-s0-w0",
+            "d-003-s0-w1",
+            "d-003-s1-w0",
+            "d-003-s1-w1",
+            "d-004-s0-w0",
+            "d-004-s0-w1",
+            "d-004-s1-w0",
+            "d-004-s1-w1",
+            "d-005-s0-w0",
+            "d-005-s0-w1",
+            "d-005-s1-w0",
+            "d-005-s1-w1",
+            "d-006-s0-w0",
+            "d-006-s0-w1",
+            "d-006-s1-w0",
+            "d-006-s1-w1",
+            "d-007-s0-w0",
+            "d-007-s0-w1",
+            "d-007-s1-w0",
+            "d-007-s1-w1",
+            "d-008-s0-w0",
+            "d-008-s0-w1",
+            "d-008-s1-w0",
+            "d-008-s1-w1",
+            "d-009-s0-w0",
+            "d-009-s0-w1",
+            "d-009-s1-w0",
+            "d-009-s1-w1",
+            "d-010-s0-w0",
+            "d-010-s0-w1",
+            "d-010-s1-w0",
+            "d-010-s1-w1",
+            "d-011-s0-w0",
+            "d-011-s0-w1",
+            "d-011-s1-w0",
+            "d-011-s1-w1"
+          ],
+          "pretrain_steps": 30,
+          "classifier_steps": 40,
+          "pretrain_loss": [
+            1.3454487323760986,
+            1.2885295152664185,
+            1.2373363971710205,
+            1.2017645835876465,
+            1.1669832468032837,
+            1.1389552354812622,
+            1.1310876607894897,
+            1.0990912914276123,
+            1.078165888786316,
+            1.0578714609146118,
+            1.0455735921859741,
+            1.0246204137802124,
+            1.016573429107666,
+            1.0081628561019897,
+            0.9958774447441101,
+            0.985436737537384,
+            0.9776028394699097,
+            0.9859493374824524,
+            0.9828160405158997,
+            0.9823825359344482,
+            0.9858812093734741,
+            0.9778947234153748,
+            0.9757925271987915,
+            0.9801771640777588,
+            0.9753620028495789,
+            0.9758864045143127,
+            0.9763149619102478,
+            0.9689838886260986,
+            0.967819333076477,
+            0.9685479998588562
+          ],
+          "pretrain_seconds": 0.12286194900025293,
+          "classifier_seconds": {
+            "random_frozen_probe": 0.02476931199998944,
+            "masked_pretrained_probe": 0.02610305399957724,
+            "supervised_from_scratch": 0.07251932400049554
+          },
+          "metrics": {
+            "validation": {
+              "fixed_frequency_logistic": {
+                "n": 24,
+                "accuracy_at_0_5": 1.0,
+                "brier": 0.05811339524652883,
+                "reliability_bins": [
+                  {
+                    "bin": 0,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 1,
+                    "n": 12,
+                    "mean_probability": 0.2404429963382523,
+                    "event_fraction": 0.0
+                  },
+                  {
+                    "bin": 2,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 3,
+                    "n": 12,
+                    "mean_probability": 0.7608654615245931,
+                    "event_fraction": 1.0
+                  },
+                  {
+                    "bin": 4,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  }
+                ]
+              },
+              "random_frozen_probe": {
+                "n": 24,
+                "accuracy_at_0_5": 0.6666666666666666,
+                "brier": 0.23920533068178915,
+                "reliability_bins": [
+                  {
+                    "bin": 0,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 1,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 2,
+                    "n": 24,
+                    "mean_probability": 0.5130752411981424,
+                    "event_fraction": 0.5
+                  },
+                  {
+                    "bin": 3,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 4,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  }
+                ]
+              },
+              "masked_pretrained_probe": {
+                "n": 24,
+                "accuracy_at_0_5": 0.75,
+                "brier": 0.24238130870899524,
+                "reliability_bins": [
+                  {
+                    "bin": 0,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 1,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 2,
+                    "n": 24,
+                    "mean_probability": 0.4923415270944436,
+                    "event_fraction": 0.5
+                  },
+                  {
+                    "bin": 3,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 4,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  }
+                ]
+              },
+              "supervised_from_scratch": {
+                "n": 24,
+                "accuracy_at_0_5": 1.0,
+                "brier": 1.1671299729211434e-05,
+                "reliability_bins": [
+                  {
+                    "bin": 0,
+                    "n": 12,
+                    "mean_probability": 0.003811952192336321,
+                    "event_fraction": 0.0
+                  },
+                  {
+                    "bin": 1,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 2,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 3,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 4,
+                    "n": 12,
+                    "mean_probability": 0.9970326572656631,
+                    "event_fraction": 1.0
+                  }
+                ]
+              }
+            },
+            "evaluation": {
+              "fixed_frequency_logistic": {
+                "n": 24,
+                "accuracy_at_0_5": 1.0,
+                "brier": 0.07436194098705416,
+                "reliability_bins": [
+                  {
+                    "bin": 0,
+                    "n": 2,
+                    "mean_probability": 0.18895091637517492,
+                    "event_fraction": 0.0
+                  },
+                  {
+                    "bin": 1,
+                    "n": 10,
+                    "mean_probability": 0.28587397917716334,
+                    "event_fraction": 0.0
+                  },
+                  {
+                    "bin": 2,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 3,
+                    "n": 10,
+                    "mean_probability": 0.7156676857160408,
+                    "event_fraction": 1.0
+                  },
+                  {
+                    "bin": 4,
+                    "n": 2,
+                    "mean_probability": 0.8119402406463495,
+                    "event_fraction": 1.0
+                  }
+                ]
+              },
+              "random_frozen_probe": {
+                "n": 24,
+                "accuracy_at_0_5": 0.75,
+                "brier": 0.23949922549463232,
+                "reliability_bins": [
+                  {
+                    "bin": 0,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 1,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 2,
+                    "n": 24,
+                    "mean_probability": 0.5125970728695393,
+                    "event_fraction": 0.5
+                  },
+                  {
+                    "bin": 3,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 4,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  }
+                ]
+              },
+              "masked_pretrained_probe": {
+                "n": 24,
+                "accuracy_at_0_5": 0.7916666666666666,
+                "brier": 0.24376702325911562,
+                "reliability_bins": [
+                  {
+                    "bin": 0,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 1,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 2,
+                    "n": 24,
+                    "mean_probability": 0.4938471205532551,
+                    "event_fraction": 0.5
+                  },
+                  {
+                    "bin": 3,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 4,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  }
+                ]
+              },
+              "supervised_from_scratch": {
+                "n": 24,
+                "accuracy_at_0_5": 1.0,
+                "brier": 1.1695896463324257e-05,
+                "reliability_bins": [
+                  {
+                    "bin": 0,
+                    "n": 12,
+                    "mean_probability": 0.003838885963583986,
+                    "event_fraction": 0.0
+                  },
+                  {
+                    "bin": 1,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 2,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 3,
+                    "n": 0,
+                    "mean_probability": null,
+                    "event_fraction": null
+                  },
+                  {
+                    "bin": 4,
+                    "n": 12,
+                    "mean_probability": 0.9970597922801971,
+                    "event_fraction": 1.0
+                  }
+                ]
+              }
+            }
+          },
+          "predictions": {
+            "validation": {
+              "record_ids": [
+                "v-000-s0-w0",
+                "v-000-s0-w1",
+                "v-000-s1-w0",
+                "v-000-s1-w1",
+                "v-001-s0-w0",
+                "v-001-s0-w1",
+                "v-001-s1-w0",
+                "v-001-s1-w1",
+                "v-002-s0-w0",
+                "v-002-s0-w1",
+                "v-002-s1-w0",
+                "v-002-s1-w1",
+                "v-003-s0-w0",
+                "v-003-s0-w1",
+                "v-003-s1-w0",
+                "v-003-s1-w1",
+                "v-004-s0-w0",
+                "v-004-s0-w1",
+                "v-004-s1-w0",
+                "v-004-s1-w1",
+                "v-005-s0-w0",
+                "v-005-s0-w1",
+                "v-005-s1-w0",
+                "v-005-s1-w1"
+              ],
+              "person_ids": [
+                "v-000",
+                "v-000",
+                "v-000",
+                "v-000",
+                "v-001",
+                "v-001",
+                "v-001",
+                "v-001",
+                "v-002",
+                "v-002",
+                "v-002",
+                "v-002",
+                "v-003",
+                "v-003",
+                "v-003",
+                "v-003",
+                "v-004",
+                "v-004",
+                "v-004",
+                "v-004",
+                "v-005",
+                "v-005",
+                "v-005",
+                "v-005"
+              ],
+              "labels": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "probabilities": {
+                "fixed_frequency_logistic": [
+                  0.22854565491227374,
+                  0.7724836347805324,
+                  0.7714797232009709,
+                  0.22831625132088634,
+                  0.7706991515780014,
+                  0.23358622622987893,
+                  0.23924538356351024,
+                  0.7656075285916357,
+                  0.2883813294114157,
+                  0.7077784741619952,
+                  0.713223084880605,
+                  0.29055641345534006,
+                  0.765907341595515,
+                  0.2315344170509161,
+                  0.23591209001174024,
+                  0.7631314979452299,
+                  0.2436330238373412,
+                  0.7593512121706446,
+                  0.7543413997174366,
+                  0.2453828590365442,
+                  0.7942069045051037,
+                  0.20972849219931472,
+                  0.2104938150298663,
+                  0.7921755851674475
+                ],
+                "random_frozen_probe": [
+                  0.5119529366493225,
+                  0.5394449830055237,
+                  0.5176404714584351,
+                  0.5012615919113159,
+                  0.5266991853713989,
+                  0.4878225326538086,
+                  0.5036264657974243,
+                  0.5263721942901611,
+                  0.4971025884151459,
+                  0.5162656903266907,
+                  0.508097231388092,
+                  0.49909910559654236,
+                  0.515916109085083,
+                  0.5071727633476257,
+                  0.5049130320549011,
+                  0.5265710353851318,
+                  0.5086349844932556,
+                  0.5243443250656128,
+                  0.532906174659729,
+                  0.4989006817340851,
+                  0.5366618037223816,
+                  0.5009008646011353,
+                  0.501757025718689,
+                  0.5197420120239258
+                ],
+                "masked_pretrained_probe": [
+                  0.48507237434387207,
+                  0.4964681565761566,
+                  0.4953501522541046,
+                  0.4862867593765259,
+                  0.502672016620636,
+                  0.4810838997364044,
+                  0.4852297902107239,
+                  0.5032405257225037,
+                  0.4815082848072052,
+                  0.5031359195709229,
+                  0.49777960777282715,
+                  0.4845055639743805,
+                  0.499557763338089,
+                  0.4789276123046875,
+                  0.48409223556518555,
+                  0.49830546975135803,
+                  0.4865119159221649,
+                  0.496963232755661,
+                  0.5009264349937439,
+                  0.4872637391090393,
+                  0.5013240575790405,
+                  0.48901504278182983,
+                  0.4856536388397217,
+                  0.5053224563598633
+                ],
+                "supervised_from_scratch": [
+                  0.0037949855905026197,
+                  0.9969322681427002,
+                  0.9970871806144714,
+                  0.003789727110415697,
+                  0.9970706701278687,
+                  0.003791091963648796,
+                  0.0037955029401928186,
+                  0.9970878958702087,
+                  0.0038104031700640917,
+                  0.9970859885215759,
+                  0.996837854385376,
+                  0.003804955165833235,
+                  0.9969788789749146,
+                  0.0038091070018708706,
+                  0.0037942591588944197,
+                  0.997075080871582,
+                  0.0038661372382193804,
+                  0.9970805048942566,
+                  0.997051477432251,
+                  0.003829184453934431,
+                  0.9970146417617798,
+                  0.0037898996379226446,
+                  0.003868172876536846,
+                  0.9970894455909729
+                ]
+              }
+            },
+            "evaluation": {
+              "record_ids": [
+                "e-000-s0-w0",
+                "e-000-s0-w1",
+                "e-000-s1-w0",
+                "e-000-s1-w1",
+                "e-001-s0-w0",
+                "e-001-s0-w1",
+                "e-001-s1-w0",
+                "e-001-s1-w1",
+                "e-002-s0-w0",
+                "e-002-s0-w1",
+                "e-002-s1-w0",
+                "e-002-s1-w1",
+                "e-003-s0-w0",
+                "e-003-s0-w1",
+                "e-003-s1-w0",
+                "e-003-s1-w1",
+                "e-004-s0-w0",
+                "e-004-s0-w1",
+                "e-004-s1-w0",
+                "e-004-s1-w1",
+                "e-005-s0-w0",
+                "e-005-s0-w1",
+                "e-005-s1-w0",
+                "e-005-s1-w1"
+              ],
+              "person_ids": [
+                "e-000",
+                "e-000",
+                "e-000",
+                "e-000",
+                "e-001",
+                "e-001",
+                "e-001",
+                "e-001",
+                "e-002",
+                "e-002",
+                "e-002",
+                "e-002",
+                "e-003",
+                "e-003",
+                "e-003",
+                "e-003",
+                "e-004",
+                "e-004",
+                "e-004",
+                "e-004",
+                "e-005",
+                "e-005",
+                "e-005",
+                "e-005"
+              ],
+              "labels": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+              ],
+              "probabilities": {
+                "fixed_frequency_logistic": [
+                  0.27273358303923373,
+                  0.7299063171624917,
+                  0.7276427833710731,
+                  0.2748670273827963,
+                  0.6705417935266926,
+                  0.33048222559269913,
+                  0.330907263939866,
+                  0.6736786506916893,
+                  0.2668556328754974,
+                  0.7337244939824944,
+                  0.7314081573126469,
+                  0.26793625379314073,
+                  0.6943809550096345,
+                  0.3035139085304005,
+                  0.30878690292003796,
+                  0.6902229984819027,
+                  0.24940738090765976,
+                  0.7545830233198583,
+                  0.7505876843019245,
+                  0.25324961279030217,
+                  0.8108021460782344,
+                  0.19523302279378618,
+                  0.18266880995656365,
+                  0.8130783352144646
+                ],
+                "random_frozen_probe": [
+                  0.4908248484134674,
+                  0.5291685461997986,
+                  0.522921085357666,
+                  0.49882084131240845,
+                  0.5232335925102234,
+                  0.5082443356513977,
+                  0.5065403580665588,
+                  0.5126537084579468,
+                  0.4995362162590027,
+                  0.5285838842391968,
+                  0.5196530818939209,
+                  0.49641573429107666,
+                  0.5143800973892212,
+                  0.4960499703884125,
+                  0.5051776766777039,
+                  0.5058590173721313,
+                  0.5102500915527344,
+                  0.5178111791610718,
+                  0.523413360118866,
+                  0.5021178126335144,
+                  0.5436428189277649,
+                  0.4992011487483978,
+                  0.5078192353248596,
+                  0.5400111079216003
+                ],
+                "masked_pretrained_probe": [
+                  0.48625844717025757,
+                  0.5013471245765686,
+                  0.5040709972381592,
+                  0.49024054408073425,
+                  0.49254530668258667,
+                  0.4906140863895416,
+                  0.48724564909935,
+                  0.4967794716358185,
+                  0.4809648394584656,
+                  0.4973911941051483,
+                  0.5027041435241699,
+                  0.48817843198776245,
+                  0.5014325976371765,
+                  0.48647210001945496,
+                  0.49142464995384216,
+                  0.5037546753883362,
+                  0.48900482058525085,
+                  0.498310923576355,
+                  0.49656161665916443,
+                  0.4892522692680359,
+                  0.501933217048645,
+                  0.4814271330833435,
+                  0.4892110824584961,
+                  0.5052055716514587
+                ],
+                "supervised_from_scratch": [
+                  0.003792291507124901,
+                  0.9970805048942566,
+                  0.9970717430114746,
+                  0.0037984177470207214,
+                  0.9970676302909851,
+                  0.0038146895822137594,
+                  0.0041568162851035595,
+                  0.9970456957817078,
+                  0.0038131061010062695,
+                  0.9970582723617554,
+                  0.997081458568573,
+                  0.0038532582111656666,
+                  0.9970294237136841,
+                  0.003807341679930687,
+                  0.0038107470609247684,
+                  0.997050404548645,
+                  0.0037872777320444584,
+                  0.9970689415931702,
+                  0.9970616698265076,
+                  0.003807725152000785,
+                  0.9970107078552246,
+                  0.0038034296594560146,
+                  0.003821530845016241,
+                  0.9970910549163818
+                ]
+              }
+            }
+          },
+          "normalizer": {
+            "schema": {
+              "sample_rate": 128,
+              "channels": [
+                "toy-left",
+                "toy-right"
+              ],
+              "units": "arbitrary",
+              "reference": "toy-common",
+              "recipe": "fixture-v1",
+              "samples_per_channel": 512,
+              "patch_samples": 32
+            },
+            "moments": [
+              {
+                "mean": 0.04966178351477763,
+                "sd": 0.7697567070610343
+              },
+              {
+                "mean": 0.05075427422331282,
+                "sd": 0.7688868687346332
+              }
+            ],
+            "fit_record_ids": [
+              "d-000-s0-w0",
+              "d-000-s0-w1",
+              "d-000-s1-w0",
+              "d-000-s1-w1",
+              "d-001-s0-w0",
+              "d-001-s0-w1",
+              "d-001-s1-w0",
+              "d-001-s1-w1",
+              "d-002-s0-w0",
+              "d-002-s0-w1",
+              "d-002-s1-w0",
+              "d-002-s1-w1",
+              "d-003-s0-w0",
+              "d-003-s0-w1",
+              "d-003-s1-w0",
+              "d-003-s1-w1",
+              "d-004-s0-w0",
+              "d-004-s0-w1",
+              "d-004-s1-w0",
+              "d-004-s1-w1",
+              "d-005-s0-w0",
+              "d-005-s0-w1",
+              "d-005-s1-w0",
+              "d-005-s1-w1",
+              "d-006-s0-w0",
+              "d-006-s0-w1",
+              "d-006-s1-w0",
+              "d-006-s1-w1",
+              "d-007-s0-w0",
+              "d-007-s0-w1",
+              "d-007-s1-w0",
+              "d-007-s1-w1",
+              "d-008-s0-w0",
+              "d-008-s0-w1",
+              "d-008-s1-w0",
+              "d-008-s1-w1",
+              "d-009-s0-w0",
+              "d-009-s0-w1",
+              "d-009-s1-w0",
+              "d-009-s1-w1",
+              "d-010-s0-w0",
+              "d-010-s0-w1",
+              "d-010-s1-w0",
+              "d-010-s1-w1",
+              "d-011-s0-w0",
+              "d-011-s0-w1",
+              "d-011-s1-w0",
+              "d-011-s1-w1"
+            ]
+          },
+          "parameter_count": 3617,
+          "limitations": "toy waveform task; one seed; no uncertainty intervals; not matched total compute; no foundation/clinical claim"
+        }
+      },
+      "elapsed_seconds": 3.044907620000231,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch28-capstone/capstone_studio.ipynb",
+      "mode": "default",
+      "notebook_sha256": "1ecab94fa862342bc0faf55540be24ef5b5ede8abc5989e6c4f3885ac4197607",
+      "executed_code_cells": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "capstone_studio.py": "7e42fe59986be6e4ccfc8316f7fbc1e5bbfd8f3d258858e093ef6cfdaf1ba5a2"
+      },
+      "observations": {},
+      "elapsed_seconds": 0.334035705000133,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch20-bci-foundations/01_decode_public_eeg.ipynb",
+      "mode": "default",
+      "notebook_sha256": "5f3031fbc3a10e039238461b4d8ab2465aaba6193b8708772a9a6deba95c3cce",
+      "executed_code_cells": [
+        2,
+        4,
+        5,
+        7
+      ],
+      "skipped_install_cells": [
+        1
+      ],
+      "status": "passed",
+      "helper_sha256": {
+        "bci_studio.py": "61d15c0af2bdb8afa63a245ca399117f7b8f5647bb768391baa4dcbba6c6689f"
+      },
+      "observations": {
+        "bci_manifest": {
+          "dataset": "https://physionet.org/content/eegmmidb/1.0.0/",
+          "config": {
+            "subject": 1,
+            "train_run": 4,
+            "validation_run": 8,
+            "test_run": 12,
+            "channels": [
+              "C3",
+              "Cz",
+              "C4"
+            ],
+            "fs": 160.0,
+            "window_samples": 320,
+            "chunk_samples": 40,
+            "threshold": 0.7,
+            "dwell_updates": 3,
+            "refractory_s": 1.0,
+            "max_age_s": 0.5,
+            "max_abs_v": 0.00015,
+            "min_channel_std_v": 1e-09,
+            "cursor_limit": 10
+          },
+          "sources": [
+            {
+              "run": 4,
+              "file": "S001R04.edf",
+              "sha256": "3d161f88e1c00632585287d2ce584c2bc0f08862438eb255ea8723e00fac693d",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            },
+            {
+              "run": 8,
+              "file": "S001R08.edf",
+              "sha256": "358fb5189220725141968ae285fbe9e3f36210b834ffba71d940af308e3aca68",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            },
+            {
+              "run": 12,
+              "file": "S001R12.edf",
+              "sha256": "2b281c9b687b4c4176e83251d74743721f2d6ebd76656a972a3b9c44d9d88cd5",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            }
+          ],
+          "label_contract": {
+            "T0": "instructed rest",
+            "T1": "imagine left fist",
+            "T2": "imagine right fist"
+          },
+          "split": "R04 train; R08 validation; R12 locked test; one participant, run-separated",
+          "features": "C3/Cz/C4 x inclusive 8-12,13-30 Hz bin-density integrals; log10 V^2",
+          "filter": {
+            "method": "causal Butterworth bandpass 7-30 Hz; prototype N=4, realized order 8 (four SOS)",
+            "sos": [
+              [
+                0.01616335571356463,
+                0.03232671142712926,
+                0.01616335571356463,
+                1.0,
+                -0.7894067626685823,
+                0.27468763954504577
+              ],
+              [
+                1.0,
+                2.0,
+                1.0,
+                1.0,
+                -1.4683395329368603,
+                0.5790527656630148
+              ],
+              [
+                1.0,
+                -2.0,
+                1.0,
+                1.0,
+                -0.6603274903669213,
+                0.620726077439836
+              ],
+              [
+                1.0,
+                -2.0,
+                1.0,
+                1.0,
+                -1.7922403403440574,
+                0.8664646474761784
+              ]
+            ],
+            "initial_state": "zero per run/reset"
+          },
+          "scaler_mean": [
+            -9.926388781313493,
+            -9.728924215833976,
+            -9.923918757301305,
+            -9.721428271208728,
+            -10.03059890206826,
+            -9.815695384344046
+          ],
+          "scaler_scale": [
+            0.11233578752324681,
+            0.18336272528581452,
+            0.18994088628343372,
+            0.1386891736543098,
+            0.14527974676585592,
+            0.10903018522838294
+          ],
+          "model_coef": [
+            [
+              0.007475167287590096,
+              -0.5544003487658952,
+              -0.1548025361778154,
+              -0.6069636056052867,
+              -0.09808037862421262,
+              -0.4980699921587204
+            ]
+          ],
+          "model_intercept": [
+            -1.9186587311338859
+          ],
+          "classes": [
+            1,
+            2
+          ],
+          "scores": {
+            "train": {
+              "run": 4,
+              "n_trials": 5,
+              "balanced_accuracy": 1.0,
+              "confusion_1_left_2_right": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ]
+            },
+            "validation": {
+              "run": 8,
+              "n_trials": 10,
+              "balanced_accuracy": 0.4583333333333333,
+              "confusion_1_left_2_right": [
+                [
+                  4,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            }
+          },
+          "versions": {
+            "numpy": "2.3.5",
+            "scipy": "1.17.0",
+            "mne": "1.13.2",
+            "scikit-learn": "1.8.0"
+          },
+          "helper_sha256": "61d15c0af2bdb8afa63a245ca399117f7b8f5647bb768391baa4dcbba6c6689f"
+        }
+      },
+      "elapsed_seconds": 1.9135754849994555,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch20-bci-foundations/02_replay_and_command_policy.ipynb",
+      "mode": "default",
+      "notebook_sha256": "5a3952f7c6899e7eedff84d6b11178e12bf81e20302a51af0ab4421d22fe4c10",
+      "executed_code_cells": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "skipped_install_cells": [
+        1
+      ],
+      "status": "passed",
+      "helper_sha256": {
+        "bci_studio.py": "61d15c0af2bdb8afa63a245ca399117f7b8f5647bb768391baa4dcbba6c6689f"
+      },
+      "observations": {
+        "clean": {
+          "run": 8,
+          "faults_injected": false,
+          "decision_rows": 500,
+          "valid_prediction_windows": 264,
+          "task_windows": 84,
+          "task_window_accuracy": 0.4880952380952381,
+          "task_commands": 13,
+          "conditional_task_command_accuracy": 0.6153846153846154,
+          "rest_annotation_seconds": 63.0,
+          "eligible_rest_windows": 58,
+          "scored_rest_seconds": 14.5,
+          "gated_commands": 33,
+          "naive_commands": 264,
+          "rest_proxy_commands_per_min": 24.82758620689655,
+          "rest_proxy_naive_per_min": 240.0,
+          "processing_ms_median": 0.2969580000353744,
+          "processing_ms_p95": 0.4471753498364704,
+          "event_counts": {
+            "amplitude_limit": 44,
+            "flat_channel": 2
+          },
+          "claim": "Causal software replay; overlapping windows; rest proxy; no live BCI validation"
+        },
+        "bci_manifest": {
+          "dataset": "https://physionet.org/content/eegmmidb/1.0.0/",
+          "config": {
+            "subject": 1,
+            "train_run": 4,
+            "validation_run": 8,
+            "test_run": 12,
+            "channels": [
+              "C3",
+              "Cz",
+              "C4"
+            ],
+            "fs": 160.0,
+            "window_samples": 320,
+            "chunk_samples": 40,
+            "threshold": 0.7,
+            "dwell_updates": 3,
+            "refractory_s": 1.0,
+            "max_age_s": 0.5,
+            "max_abs_v": 0.00015,
+            "min_channel_std_v": 1e-09,
+            "cursor_limit": 10
+          },
+          "sources": [
+            {
+              "run": 4,
+              "file": "S001R04.edf",
+              "sha256": "3d161f88e1c00632585287d2ce584c2bc0f08862438eb255ea8723e00fac693d",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            },
+            {
+              "run": 8,
+              "file": "S001R08.edf",
+              "sha256": "358fb5189220725141968ae285fbe9e3f36210b834ffba71d940af308e3aca68",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            },
+            {
+              "run": 12,
+              "file": "S001R12.edf",
+              "sha256": "2b281c9b687b4c4176e83251d74743721f2d6ebd76656a972a3b9c44d9d88cd5",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            }
+          ],
+          "label_contract": {
+            "T0": "instructed rest",
+            "T1": "imagine left fist",
+            "T2": "imagine right fist"
+          },
+          "split": "R04 train; R08 validation; R12 locked test; one participant, run-separated",
+          "features": "C3/Cz/C4 x inclusive 8-12,13-30 Hz bin-density integrals; log10 V^2",
+          "filter": {
+            "method": "causal Butterworth bandpass 7-30 Hz; prototype N=4, realized order 8 (four SOS)",
+            "sos": [
+              [
+                0.01616335571356463,
+                0.03232671142712926,
+                0.01616335571356463,
+                1.0,
+                -0.7894067626685823,
+                0.27468763954504577
+              ],
+              [
+                1.0,
+                2.0,
+                1.0,
+                1.0,
+                -1.4683395329368603,
+                0.5790527656630148
+              ],
+              [
+                1.0,
+                -2.0,
+                1.0,
+                1.0,
+                -0.6603274903669213,
+                0.620726077439836
+              ],
+              [
+                1.0,
+                -2.0,
+                1.0,
+                1.0,
+                -1.7922403403440574,
+                0.8664646474761784
+              ]
+            ],
+            "initial_state": "zero per run/reset"
+          },
+          "scaler_mean": [
+            -9.926388781313493,
+            -9.728924215833976,
+            -9.923918757301305,
+            -9.721428271208728,
+            -10.03059890206826,
+            -9.815695384344046
+          ],
+          "scaler_scale": [
+            0.11233578752324681,
+            0.18336272528581452,
+            0.18994088628343372,
+            0.1386891736543098,
+            0.14527974676585592,
+            0.10903018522838294
+          ],
+          "model_coef": [
+            [
+              0.007475167287590096,
+              -0.5544003487658952,
+              -0.1548025361778154,
+              -0.6069636056052867,
+              -0.09808037862421262,
+              -0.4980699921587204
+            ]
+          ],
+          "model_intercept": [
+            -1.9186587311338859
+          ],
+          "classes": [
+            1,
+            2
+          ],
+          "scores": {
+            "train": {
+              "run": 4,
+              "n_trials": 5,
+              "balanced_accuracy": 1.0,
+              "confusion_1_left_2_right": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ]
+            },
+            "validation": {
+              "run": 8,
+              "n_trials": 10,
+              "balanced_accuracy": 0.4583333333333333,
+              "confusion_1_left_2_right": [
+                [
+                  4,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            }
+          },
+          "versions": {
+            "numpy": "2.3.5",
+            "scipy": "1.17.0",
+            "mne": "1.13.2",
+            "scikit-learn": "1.8.0"
+          },
+          "helper_sha256": "61d15c0af2bdb8afa63a245ca399117f7b8f5647bb768391baa4dcbba6c6689f"
+        }
+      },
+      "elapsed_seconds": 2.0100476039997375,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch20-bci-foundations/03_faults_and_validation.ipynb",
+      "mode": "default",
+      "notebook_sha256": "ea90727a9c93abd76d3afdf52e382510fbc3e83296174597d82cb9303bf207d3",
+      "executed_code_cells": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "skipped_install_cells": [
+        1
+      ],
+      "status": "expected_freeze_gate",
+      "helper_sha256": {
+        "bci_studio.py": "61d15c0af2bdb8afa63a245ca399117f7b8f5647bb768391baa4dcbba6c6689f"
+      },
+      "gate_cell": 8,
+      "gate_reason": "Freeze the configuration and document the decision before opening R12.",
+      "observations": {
+        "faulted": {
+          "run": 8,
+          "faults_injected": true,
+          "decision_rows": 499,
+          "valid_prediction_windows": 246,
+          "task_windows": 74,
+          "task_window_accuracy": 0.527027027027027,
+          "task_commands": 11,
+          "conditional_task_command_accuracy": 0.6363636363636364,
+          "rest_annotation_seconds": 63.0,
+          "eligible_rest_windows": 58,
+          "scored_rest_seconds": 14.5,
+          "gated_commands": 30,
+          "naive_commands": 246,
+          "rest_proxy_commands_per_min": 24.82758620689655,
+          "rest_proxy_naive_per_min": 240.0,
+          "processing_ms_median": 0.2867579996745917,
+          "processing_ms_p95": 0.4231772500133957,
+          "event_counts": {
+            "amplitude_limit": 44,
+            "flat_channel": 3,
+            "injected_drop": 1,
+            "sample_gap": 1,
+            "stale_packet": 1
+          },
+          "claim": "Causal software replay; overlapping windows; rest proxy; no live BCI validation"
+        },
+        "clean": {
+          "run": 8,
+          "faults_injected": false,
+          "decision_rows": 500,
+          "valid_prediction_windows": 264,
+          "task_windows": 84,
+          "task_window_accuracy": 0.4880952380952381,
+          "task_commands": 13,
+          "conditional_task_command_accuracy": 0.6153846153846154,
+          "rest_annotation_seconds": 63.0,
+          "eligible_rest_windows": 58,
+          "scored_rest_seconds": 14.5,
+          "gated_commands": 33,
+          "naive_commands": 264,
+          "rest_proxy_commands_per_min": 24.82758620689655,
+          "rest_proxy_naive_per_min": 240.0,
+          "processing_ms_median": 0.28077500019207946,
+          "processing_ms_p95": 0.397090900423791,
+          "event_counts": {
+            "amplitude_limit": 44,
+            "flat_channel": 2
+          },
+          "claim": "Causal software replay; overlapping windows; rest proxy; no live BCI validation"
+        },
+        "bci_manifest": {
+          "dataset": "https://physionet.org/content/eegmmidb/1.0.0/",
+          "config": {
+            "subject": 1,
+            "train_run": 4,
+            "validation_run": 8,
+            "test_run": 12,
+            "channels": [
+              "C3",
+              "Cz",
+              "C4"
+            ],
+            "fs": 160.0,
+            "window_samples": 320,
+            "chunk_samples": 40,
+            "threshold": 0.7,
+            "dwell_updates": 3,
+            "refractory_s": 1.0,
+            "max_age_s": 0.5,
+            "max_abs_v": 0.00015,
+            "min_channel_std_v": 1e-09,
+            "cursor_limit": 10
+          },
+          "sources": [
+            {
+              "run": 4,
+              "file": "S001R04.edf",
+              "sha256": "3d161f88e1c00632585287d2ce584c2bc0f08862438eb255ea8723e00fac693d",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            },
+            {
+              "run": 8,
+              "file": "S001R08.edf",
+              "sha256": "358fb5189220725141968ae285fbe9e3f36210b834ffba71d940af308e3aca68",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            },
+            {
+              "run": 12,
+              "file": "S001R12.edf",
+              "sha256": "2b281c9b687b4c4176e83251d74743721f2d6ebd76656a972a3b9c44d9d88cd5",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            }
+          ],
+          "label_contract": {
+            "T0": "instructed rest",
+            "T1": "imagine left fist",
+            "T2": "imagine right fist"
+          },
+          "split": "R04 train; R08 validation; R12 locked test; one participant, run-separated",
+          "features": "C3/Cz/C4 x inclusive 8-12,13-30 Hz bin-density integrals; log10 V^2",
+          "filter": {
+            "method": "causal Butterworth bandpass 7-30 Hz; prototype N=4, realized order 8 (four SOS)",
+            "sos": [
+              [
+                0.01616335571356463,
+                0.03232671142712926,
+                0.01616335571356463,
+                1.0,
+                -0.7894067626685823,
+                0.27468763954504577
+              ],
+              [
+                1.0,
+                2.0,
+                1.0,
+                1.0,
+                -1.4683395329368603,
+                0.5790527656630148
+              ],
+              [
+                1.0,
+                -2.0,
+                1.0,
+                1.0,
+                -0.6603274903669213,
+                0.620726077439836
+              ],
+              [
+                1.0,
+                -2.0,
+                1.0,
+                1.0,
+                -1.7922403403440574,
+                0.8664646474761784
+              ]
+            ],
+            "initial_state": "zero per run/reset"
+          },
+          "scaler_mean": [
+            -9.926388781313493,
+            -9.728924215833976,
+            -9.923918757301305,
+            -9.721428271208728,
+            -10.03059890206826,
+            -9.815695384344046
+          ],
+          "scaler_scale": [
+            0.11233578752324681,
+            0.18336272528581452,
+            0.18994088628343372,
+            0.1386891736543098,
+            0.14527974676585592,
+            0.10903018522838294
+          ],
+          "model_coef": [
+            [
+              0.007475167287590096,
+              -0.5544003487658952,
+              -0.1548025361778154,
+              -0.6069636056052867,
+              -0.09808037862421262,
+              -0.4980699921587204
+            ]
+          ],
+          "model_intercept": [
+            -1.9186587311338859
+          ],
+          "classes": [
+            1,
+            2
+          ],
+          "scores": {
+            "train": {
+              "run": 4,
+              "n_trials": 5,
+              "balanced_accuracy": 1.0,
+              "confusion_1_left_2_right": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ]
+            },
+            "validation": {
+              "run": 8,
+              "n_trials": 10,
+              "balanced_accuracy": 0.4583333333333333,
+              "confusion_1_left_2_right": [
+                [
+                  4,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            }
+          },
+          "versions": {
+            "numpy": "2.3.5",
+            "scipy": "1.17.0",
+            "mne": "1.13.2",
+            "scikit-learn": "1.8.0"
+          },
+          "helper_sha256": "61d15c0af2bdb8afa63a245ca399117f7b8f5647bb768391baa4dcbba6c6689f"
+        }
+      },
+      "elapsed_seconds": 1.8578844319999916,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch20-bci-foundations/03_faults_and_validation.ipynb",
+      "mode": "frozen",
+      "notebook_sha256": "ea90727a9c93abd76d3afdf52e382510fbc3e83296174597d82cb9303bf207d3",
+      "executed_code_cells": [
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "skipped_install_cells": [
+        1
+      ],
+      "status": "passed",
+      "helper_sha256": {
+        "bci_studio.py": "61d15c0af2bdb8afa63a245ca399117f7b8f5647bb768391baa4dcbba6c6689f"
+      },
+      "observations": {
+        "faulted": {
+          "run": 8,
+          "faults_injected": true,
+          "decision_rows": 499,
+          "valid_prediction_windows": 246,
+          "task_windows": 74,
+          "task_window_accuracy": 0.527027027027027,
+          "task_commands": 11,
+          "conditional_task_command_accuracy": 0.6363636363636364,
+          "rest_annotation_seconds": 63.0,
+          "eligible_rest_windows": 58,
+          "scored_rest_seconds": 14.5,
+          "gated_commands": 30,
+          "naive_commands": 246,
+          "rest_proxy_commands_per_min": 24.82758620689655,
+          "rest_proxy_naive_per_min": 240.0,
+          "processing_ms_median": 0.3019859996129526,
+          "processing_ms_p95": 0.6842822499493195,
+          "event_counts": {
+            "amplitude_limit": 44,
+            "flat_channel": 3,
+            "injected_drop": 1,
+            "sample_gap": 1,
+            "stale_packet": 1
+          },
+          "claim": "Causal software replay; overlapping windows; rest proxy; no live BCI validation"
+        },
+        "clean": {
+          "run": 8,
+          "faults_injected": false,
+          "decision_rows": 500,
+          "valid_prediction_windows": 264,
+          "task_windows": 84,
+          "task_window_accuracy": 0.4880952380952381,
+          "task_commands": 13,
+          "conditional_task_command_accuracy": 0.6153846153846154,
+          "rest_annotation_seconds": 63.0,
+          "eligible_rest_windows": 58,
+          "scored_rest_seconds": 14.5,
+          "gated_commands": 33,
+          "naive_commands": 264,
+          "rest_proxy_commands_per_min": 24.82758620689655,
+          "rest_proxy_naive_per_min": 240.0,
+          "processing_ms_median": 0.2853209998647799,
+          "processing_ms_p95": 0.4014865500266751,
+          "event_counts": {
+            "amplitude_limit": 44,
+            "flat_channel": 2
+          },
+          "claim": "Causal software replay; overlapping windows; rest proxy; no live BCI validation"
+        },
+        "offline_test": {
+          "run": 12,
+          "n_trials": 11,
+          "balanced_accuracy": 0.6,
+          "confusion_1_left_2_right": [
+            [
+              6,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        },
+        "bci_manifest": {
+          "dataset": "https://physionet.org/content/eegmmidb/1.0.0/",
+          "config": {
+            "subject": 1,
+            "train_run": 4,
+            "validation_run": 8,
+            "test_run": 12,
+            "channels": [
+              "C3",
+              "Cz",
+              "C4"
+            ],
+            "fs": 160.0,
+            "window_samples": 320,
+            "chunk_samples": 40,
+            "threshold": 0.7,
+            "dwell_updates": 3,
+            "refractory_s": 1.0,
+            "max_age_s": 0.5,
+            "max_abs_v": 0.00015,
+            "min_channel_std_v": 1e-09,
+            "cursor_limit": 10
+          },
+          "sources": [
+            {
+              "run": 4,
+              "file": "S001R04.edf",
+              "sha256": "3d161f88e1c00632585287d2ce584c2bc0f08862438eb255ea8723e00fac693d",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            },
+            {
+              "run": 8,
+              "file": "S001R08.edf",
+              "sha256": "358fb5189220725141968ae285fbe9e3f36210b834ffba71d940af308e3aca68",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            },
+            {
+              "run": 12,
+              "file": "S001R12.edf",
+              "sha256": "2b281c9b687b4c4176e83251d74743721f2d6ebd76656a972a3b9c44d9d88cd5",
+              "units": "V",
+              "channels": [
+                "C3",
+                "Cz",
+                "C4"
+              ],
+              "sfreq": 160.0
+            }
+          ],
+          "label_contract": {
+            "T0": "instructed rest",
+            "T1": "imagine left fist",
+            "T2": "imagine right fist"
+          },
+          "split": "R04 train; R08 validation; R12 locked test; one participant, run-separated",
+          "features": "C3/Cz/C4 x inclusive 8-12,13-30 Hz bin-density integrals; log10 V^2",
+          "filter": {
+            "method": "causal Butterworth bandpass 7-30 Hz; prototype N=4, realized order 8 (four SOS)",
+            "sos": [
+              [
+                0.01616335571356463,
+                0.03232671142712926,
+                0.01616335571356463,
+                1.0,
+                -0.7894067626685823,
+                0.27468763954504577
+              ],
+              [
+                1.0,
+                2.0,
+                1.0,
+                1.0,
+                -1.4683395329368603,
+                0.5790527656630148
+              ],
+              [
+                1.0,
+                -2.0,
+                1.0,
+                1.0,
+                -0.6603274903669213,
+                0.620726077439836
+              ],
+              [
+                1.0,
+                -2.0,
+                1.0,
+                1.0,
+                -1.7922403403440574,
+                0.8664646474761784
+              ]
+            ],
+            "initial_state": "zero per run/reset"
+          },
+          "scaler_mean": [
+            -9.926388781313493,
+            -9.728924215833976,
+            -9.923918757301305,
+            -9.721428271208728,
+            -10.03059890206826,
+            -9.815695384344046
+          ],
+          "scaler_scale": [
+            0.11233578752324681,
+            0.18336272528581452,
+            0.18994088628343372,
+            0.1386891736543098,
+            0.14527974676585592,
+            0.10903018522838294
+          ],
+          "model_coef": [
+            [
+              0.007475167287590096,
+              -0.5544003487658952,
+              -0.1548025361778154,
+              -0.6069636056052867,
+              -0.09808037862421262,
+              -0.4980699921587204
+            ]
+          ],
+          "model_intercept": [
+            -1.9186587311338859
+          ],
+          "classes": [
+            1,
+            2
+          ],
+          "scores": {
+            "train": {
+              "run": 4,
+              "n_trials": 5,
+              "balanced_accuracy": 1.0,
+              "confusion_1_left_2_right": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ]
+            },
+            "validation": {
+              "run": 8,
+              "n_trials": 10,
+              "balanced_accuracy": 0.4583333333333333,
+              "confusion_1_left_2_right": [
+                [
+                  4,
+                  2
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            }
+          },
+          "versions": {
+            "numpy": "2.3.5",
+            "scipy": "1.17.0",
+            "mne": "1.13.2",
+            "scikit-learn": "1.8.0"
+          },
+          "helper_sha256": "61d15c0af2bdb8afa63a245ca399117f7b8f5647bb768391baa4dcbba6c6689f"
+        }
+      },
+      "elapsed_seconds": 1.8470571090001613,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    },
+    {
+      "notebook": "chapters/ch23-distributed-platform/01_event_ledger.ipynb",
+      "mode": "default",
+      "notebook_sha256": "f6eb3b1ed63294f856a69de2436eb4f6a2fcc08e4e28e46103838c8c5c20d7eb",
+      "executed_code_cells": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "skipped_install_cells": [],
+      "status": "passed",
+      "helper_sha256": {
+        "distributed_platform.py": "5495320b29acc7543e73a93d3e4eae29907ac2a23d5b357f3bfdb1fea6d94a1f"
+      },
+      "observations": {
+        "event_ledger": {
+          "schema": "chapter23-evidence.v1",
+          "expected_opportunities": 10,
+          "clock": "one synthetic shared virtual millisecond clock",
+          "fault_schedule": "delay seq2 +160; omit7; quality4 false; retry1; conflict1; denied0",
+          "attempts": [
+            {
+              "arrival_ms": 405,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 0,
+                "source_ms": 400,
+                "expires_ms": 500,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "accepted"
+            },
+            {
+              "arrival_ms": 410,
+              "principal": "unauthorized-fixture",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 0,
+                "source_ms": 400,
+                "expires_ms": 500,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "denied",
+              "reason": "publish denied"
+            },
+            {
+              "arrival_ms": 425,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 1,
+                "source_ms": 420,
+                "expires_ms": 520,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "accepted"
+            },
+            {
+              "arrival_ms": 465,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 3,
+                "source_ms": 460,
+                "expires_ms": 560,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "accepted"
+            },
+            {
+              "arrival_ms": 485,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 4,
+                "source_ms": 480,
+                "expires_ms": 580,
+                "quality_ok": false,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "quality_inhibited"
+            },
+            {
+              "arrival_ms": 505,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 5,
+                "source_ms": 500,
+                "expires_ms": 600,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "accepted"
+            },
+            {
+              "arrival_ms": 525,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 6,
+                "source_ms": 520,
+                "expires_ms": 620,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "accepted"
+            },
+            {
+              "arrival_ms": 565,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 8,
+                "source_ms": 560,
+                "expires_ms": 660,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "accepted"
+            },
+            {
+              "arrival_ms": 585,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 9,
+                "source_ms": 580,
+                "expires_ms": 680,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "accepted"
+            },
+            {
+              "arrival_ms": 600,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 2,
+                "source_ms": 440,
+                "expires_ms": 540,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "stored",
+              "monitor_outcome": "expired"
+            },
+            {
+              "arrival_ms": 625,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 1,
+                "source_ms": 420,
+                "expires_ms": 520,
+                "quality_ok": true,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "duplicate"
+            },
+            {
+              "arrival_ms": 630,
+              "principal": "fixture-publisher",
+              "event": {
+                "schema": "quality.v1",
+                "stream": "eeg-demo",
+                "epoch": "session-001",
+                "seq": 1,
+                "source_ms": 420,
+                "expires_ms": 520,
+                "quality_ok": false,
+                "transform": "toy-quality-v1"
+              },
+              "archive_outcome": "conflict",
+              "reason": "event identity conflict"
+            }
+          ],
+          "archive": [
+            {
+              "epoch": "session-001",
+              "expires_ms": 500,
+              "quality_ok": true,
+              "schema": "quality.v1",
+              "seq": 0,
+              "source_ms": 400,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            },
+            {
+              "epoch": "session-001",
+              "expires_ms": 520,
+              "quality_ok": true,
+              "schema": "quality.v1",
+              "seq": 1,
+              "source_ms": 420,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            },
+            {
+              "epoch": "session-001",
+              "expires_ms": 540,
+              "quality_ok": true,
+              "schema": "quality.v1",
+              "seq": 2,
+              "source_ms": 440,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            },
+            {
+              "epoch": "session-001",
+              "expires_ms": 560,
+              "quality_ok": true,
+              "schema": "quality.v1",
+              "seq": 3,
+              "source_ms": 460,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            },
+            {
+              "epoch": "session-001",
+              "expires_ms": 580,
+              "quality_ok": false,
+              "schema": "quality.v1",
+              "seq": 4,
+              "source_ms": 480,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            },
+            {
+              "epoch": "session-001",
+              "expires_ms": 600,
+              "quality_ok": true,
+              "schema": "quality.v1",
+              "seq": 5,
+              "source_ms": 500,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            },
+            {
+              "epoch": "session-001",
+              "expires_ms": 620,
+              "quality_ok": true,
+              "schema": "quality.v1",
+              "seq": 6,
+              "source_ms": 520,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            },
+            {
+              "epoch": "session-001",
+              "expires_ms": 660,
+              "quality_ok": true,
+              "schema": "quality.v1",
+              "seq": 8,
+              "source_ms": 560,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            },
+            {
+              "epoch": "session-001",
+              "expires_ms": 680,
+              "quality_ok": true,
+              "schema": "quality.v1",
+              "seq": 9,
+              "source_ms": 580,
+              "stream": "eeg-demo",
+              "transform": "toy-quality-v1"
+            }
+          ],
+          "monitor_outcomes": {
+            "0": "accepted",
+            "1": "accepted",
+            "2": "expired",
+            "3": "accepted",
+            "4": "quality_inhibited",
+            "5": "accepted",
+            "6": "accepted",
+            "7": "missing",
+            "8": "accepted",
+            "9": "accepted"
+          },
+          "archive_count": 9,
+          "monitor_accepted": 7,
+          "archive_coverage": 0.9,
+          "timely_valid_monitor_coverage": 0.7,
+          "status_at_1000_ms": {
+            "state": "stale",
+            "last_accepted": {
+              "schema": "quality.v1",
+              "stream": "eeg-demo",
+              "epoch": "session-001",
+              "seq": 9,
+              "source_ms": 580,
+              "expires_ms": 680,
+              "quality_ok": true,
+              "transform": "toy-quality-v1"
+            },
+            "source_age_ms": 420
+          },
+          "restart": {
+            "retry_outcome": "duplicate",
+            "archive_count": 9
+          },
+          "versions": {
+            "python": "3.12.14",
+            "sqlite": "3.53.1"
+          },
+          "limitations": [
+            "synthetic quality events, no EEG or clinical inference",
+            "no network, broker, spool, authentication, concurrent calls or crash injection",
+            "receiver restart tested; monitor state is volatile",
+            "coverage counts fixture outcomes, not patient benefit or transport reliability"
+          ],
+          "helper_sha256": "5495320b29acc7543e73a93d3e4eae29907ac2a23d5b357f3bfdb1fea6d94a1f"
+        }
+      },
+      "elapsed_seconds": 0.38861456799986627,
+      "versions": {
+        "numpy": "2.3.5",
+        "scipy": "1.17.0",
+        "mne": "1.13.2",
+        "scikit-learn": "1.8.0",
+        "matplotlib": "3.10.8",
+        "torch": "2.6.0+cpu",
+        "ipython": "9.16.1"
+      }
+    }
+  ]
+}

@@ -50,4 +50,6 @@ Chapter 20 supplies a causal EEG replay interface, and Chapter 21 separates obse
 - `ASSIGNMENT.md`: deliverables, assessment criteria, and extension boundaries.
 - `requirements-notebooks.txt`: optional notebook and plotting dependencies.
 
-The teaching material has been statically inspected. The notebook, simulator, audit, and hardware extensions have not been executed as part of authoring. Students must run and inspect them before reporting outcomes.
+The default notebook and virtual simulator have undergone bounded author execution; see the verification report below. Hardware extensions were not executed. Students must run and inspect their own results.
+
+See [the later-studio execution review](../../verification/later-studio-execution.md) for exact scope, source hashes, observed outcomes and limitations.

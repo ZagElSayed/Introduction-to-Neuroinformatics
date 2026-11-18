@@ -176,7 +176,7 @@ def build_experiment(cfg=Config(), data_dir="bci_data"):
                                    "T2": "imagine right fist"},
                 "split": "R04 train; R08 validation; R12 locked test; one participant, run-separated",
                 "features": "C3/Cz/C4 x inclusive 8-12,13-30 Hz bin-density integrals; log10 V^2",
-                "filter": {"method": "causal Butterworth order 4 bandpass 7-30 Hz",
+                "filter": {"method": "causal Butterworth bandpass 7-30 Hz; prototype N=4, realized order 8 (four SOS)",
                            "sos": filter_design(cfg).tolist(), "initial_state": "zero per run/reset"},
                 "scaler_mean": scaler.mean_.tolist(), "scaler_scale": scaler.scale_.tolist(),
                 "model_coef": classifier.coef_.tolist(), "model_intercept": classifier.intercept_.tolist(),
